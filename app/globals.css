@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Nunito:wght@300;400;600;700&family=Oswald:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #FFFFFF;
+  color: #1a1a1a;
+  overflow-x: hidden;
+}
+
+/* ── Buttons ── */
+.btn-gold {
+  background: linear-gradient(135deg, #F07840, #D4621A);
+  color: #ffffff;
+  font-weight: 700;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+.btn-gold:hover {
+  background: linear-gradient(135deg, #D4621A, #B84E10);
+  box-shadow: 0 8px 25px rgba(232,112,46,0.35);
+  transform: translateY(-2px);
+}
+.btn-blue {
+  background: linear-gradient(135deg, #2D6A4F, #40916C);
+  color: #fff;
+  font-weight: 700;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+.btn-blue:hover {
+  background: linear-gradient(135deg, #40916C, #2D6A4F);
+  box-shadow: 0 8px 25px rgba(45,106,79,0.35);
+  transform: translateY(-2px);
+}
+
+/* ── Card hover ── */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(45,106,79,0.12);
+}
+
+/* ── Section title ── */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(90deg, #F07840, #D4621A);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* ── Hero overlay ── */
+.hero-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(22,60,40,0.82) 0%,
+    rgba(45,106,79,0.60) 50%,
+    rgba(232,112,46,0.28) 100%
+  );
+}
+
+/* ── Dairy pattern bg ── */
+.dairy-pattern {
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(232,112,46,0.06) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(45,106,79,0.07) 0%, transparent 40%),
+    radial-gradient(circle at 60% 80%, rgba(64,145,108,0.04) 0%, transparent 40%);
+}
+
+/* ── Marquee ── */
+.marquee-track {
+  display: flex;
+  animation: marquee 30s linear infinite;
+  white-space: nowrap;
+}
+
+/* ── Gallery ── */
+.gallery-img {
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: brightness(0.92);
+}
+.gallery-img:hover { filter: brightness(1.08); transform: scale(1.04); }
+
+/* ── Stat glow ── */
+.stat-glow { text-shadow: 0 0 20px rgba(240,120,64,0.45); }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #E8702E; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #2D6A4F; }
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-12px); }
+}
+.animate-float { animation: float 6s ease-in-out infinite; }
+
+/* ── Industry carousel ── */
+@keyframes industry-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.industry-scroll-track {
+  animation: industry-scroll 28s linear infinite;
+}
+.industry-scroll-track:hover {
+  animation-play-state: paused;
+}
