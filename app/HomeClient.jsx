@@ -93,7 +93,7 @@ export default function HomeClient() {
           {/* Main heading */}
           <h1 style={{ fontFamily: '"Playfair Display", serif', fontSize: 'clamp(2.6rem, 7vw, 5.2rem)', fontWeight: 900, lineHeight: 1.1, marginBottom: 20, textShadow: '0 4px 24px rgba(0,0,0,0.4)' }}>
             <span style={{ color: '#F07840' }}>Godwa Dairy</span><br />
-            <span style={{ color: '#ffffff' }}>Expo 2026</span>
+            <span style={{ color: '#ffffff' }}>Expo 2026.</span>
           </h1>
 
           {/* Date · Venue · Time bar */}

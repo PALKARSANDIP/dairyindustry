@@ -12,6 +12,6 @@
 // This config is for reference — Sanity reads schema from your project
 // when you link it via the CLI or Sanity dashboard
 
-export const projectId = 'YOUR_PROJECT_ID'   // ← PASTE YOUR PROJECT ID HERE
+export const projectId = 'tgsy9rl4'   // ← PASTE YOUR PROJECT ID HERE
 export const dataset = 'production'
 export const apiVersion = '2024-01-01'
