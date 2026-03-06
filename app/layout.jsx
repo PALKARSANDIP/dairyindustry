@@ -36,14 +36,14 @@ export const metadata = {
     siteName: 'Godwa Dairy Expo',
     title: "Godwa Dairy Expo 2026 | India's Premier Dairy & Food Industry Exhibition - Pune",
     description: "India's 13th Premier Dairy, Bakery, Food Processing & Feed Tech Exhibition. 5-7 December 2026, Pune. 15,000+ visitors, 150+ exhibitors.",
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Godwa Dairy Expo 2026 - Pune, December 5-7' }],
+    images: [{ url: 'https://dairyindustry.in/og-image.jpg', width: 1200, height: 630, alt: 'Godwa Dairy Expo 2026 - Pune, December 5-7' }],
   },
   twitter: {
     card: 'summary_large_image',
     site: '@GodwaDairyExpo',
     title: "Godwa Dairy Expo 2026 | India's Premier Dairy Exhibition",
     description: "India's 13th Dairy, Bakery & Food Processing Expo. 5-7 December 2026, Pune.",
-    images: ['/og-image.jpg'],
+    images: ['https://dairyindustry.in/og-image.jpg'],
   },
 }
 
@@ -77,7 +77,7 @@ const eventSchema = {
     email: 'dairyexpo@gmail.com',
   },
   url: SITE.url,
-  image: [SITE.url + '/og-image.jpg'],
+  image: [SITE.url + 'https://dairyindustry.in/og-image.jpg'],
   offers: [
     { '@type': 'Offer', name: 'Visitor Entry', price: '0', priceCurrency: 'INR', availability: 'https://schema.org/InStock', url: SITE.url + '/visitors' },
     { '@type': 'Offer', name: 'Exhibitor Stall', availability: 'https://schema.org/InStock', url: SITE.url + '/exhibitors', validThrough: '2026-09-30' },

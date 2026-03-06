@@ -59,7 +59,7 @@ This allows your website to read content from Sanity.
 2. Click your project → "API" tab → "CORS Origins"
 3. Click "Add CORS origin"
 4. Add your Vercel URL: https://your-site.vercel.app
-5. Add your custom domain: https://www.godwadairyexpo.com
+5. Add your custom domain: https://dairyindustry.in/
 6. Check "Allow credentials" → Save
 7. Also add: http://localhost:3000 (for local development)
 

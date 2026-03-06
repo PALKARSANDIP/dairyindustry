@@ -1,3 +1,4 @@
+// app/page.jsx
 import { buildMetadata } from '@/lib/seo'
 import HomeClient from './HomeClient'
 
