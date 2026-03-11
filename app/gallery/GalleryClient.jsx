@@ -150,7 +150,7 @@ function GalleryInner() {
           </div>
 
           {/* Grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 14 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 16 }}>
             {images.map((img, i) => (
               <div key={i} onClick={() => setLightbox(i)} style={{ borderRadius: 14, overflow: 'hidden', cursor: 'pointer', aspectRatio: '1/1', position: 'relative', boxShadow: '0 4px 16px rgba(0,0,0,0.1)' }}
                 onMouseEnter={e => { e.currentTarget.querySelector('div').style.opacity = '1' }}

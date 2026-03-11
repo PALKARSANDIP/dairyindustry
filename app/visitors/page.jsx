@@ -41,7 +41,7 @@ export default function VisitorsPage() {
             <h2 style={{ fontFamily: '"Playfair Display", serif', fontSize: 22, fontWeight: 700, color: '#1A3A5C' }}>Register as a Visitor -- It's Free!</h2>
             <p style={{ color: 'rgba(26,58,92,0.7)', fontSize: 14, marginTop: 4 }}>Join thousands of professionals at India's premier dairy expo</p>
           </div>
-          <a href="https://forms.gle/m1o3G6CDSA3q1Jwv7" target="_blank" rel="noopener noreferrer" style={{ background: '#1A3A5C', color: 'white', padding: '14px 28px', borderRadius: 999, fontFamily: 'Oswald, sans-serif', fontWeight: 700, letterSpacing: '0.06em', fontSize: 14, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8, boxShadow: '0 4px 20px rgba(0,0,0,0.2)', whiteSpace: 'nowrap' }}>
+          <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer" style={{ background: '#1A3A5C', color: 'white', padding: '14px 28px', borderRadius: 999, fontFamily: 'Oswald, sans-serif', fontWeight: 700, letterSpacing: '0.06em', fontSize: 14, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8, boxShadow: '0 4px 20px rgba(0,0,0,0.2)', whiteSpace: 'nowrap' }}>
             Register Now <ExternalLink size={15} />
           </a>
         </div>
@@ -120,7 +120,7 @@ export default function VisitorsPage() {
         <div style={{ maxWidth: 600, margin: '0 auto', padding: '0 16px' }}>
           <h2 style={{ fontFamily: '"Playfair Display", serif', fontSize: 30, fontWeight: 700, color: '#1A3A5C', marginBottom: 10 }}>Ready to Visit?</h2>
           <p style={{ color: '#666', fontSize: 14, marginBottom: 24, lineHeight: 1.7 }}>Register in advance and get your free entry pass. Experience India's biggest dairy expo on 5-7 December 2026, Pune.</p>
-          <a href="https://forms.gle/m1o3G6CDSA3q1Jwv7" target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ padding: '14px 36px', borderRadius: 999, fontSize: 15, textDecoration: 'none', gap: 8, boxShadow: '0 4px 20px rgba(212,160,23,0.4)' }}>
+          <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ padding: '14px 36px', borderRadius: 999, fontSize: 15, textDecoration: 'none', gap: 8, boxShadow: '0 4px 20px rgba(212,160,23,0.4)' }}>
             Register as Visitor <ArrowRight size={16} />
           </a>
         </div>

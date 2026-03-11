@@ -43,8 +43,8 @@ export default function AboutPage() {
             </div>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
-            {['https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=500&q=80','https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?w=500&q=80','https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=500&q=80','https://images.unsplash.com/photo-1550583724-b2692b85b150?w=500&q=80'].map((src, i) => (
-              <img key={i} src={src} alt={`Godwa Expo past edition ${i+1}`} style={{ width: '100%', height: 180, objectFit: 'cover', borderRadius: 14, boxShadow: '0 4px 16px rgba(0,0,0,0.1)', marginTop: i%2===1 ? 24 : 0 }} />
+            {['/Images/2023/DSC_6616-1536x1024.jpg', '/Images/2022/Pi7_Image_Img21.jpg', '/Images/2025/6Y9A0243.JPG', '/Images/2025/6Y9A0344.JPG'].map((src, i) => (
+              <img key={i} src={src} alt={`Godwa Expo past edition ${i + 1}`} style={{ width: '100%', height: 180, objectFit: 'cover', borderRadius: 14, boxShadow: '0 4px 16px rgba(0,0,0,0.1)', marginTop: i % 2 === 1 ? 24 : 0 }} />
             ))}
           </div>
         </div>
@@ -52,7 +52,7 @@ export default function AboutPage() {
 
       <section style={{ padding: '56px 0', background: '#1A3A5C' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 16px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: 24, textAlign: 'center' }}>
-          {[{ v: '13th', l: 'Edition 2026' },{ v: '15,000+', l: 'Visitors' },{ v: '150+', l: 'Exhibitors' },{ v: '2000', l: 'Sq Meter' }].map(({ v, l }) => (
+          {[{ v: '13th', l: 'Edition 2026' }, { v: '15,000+', l: 'Visitors' }, { v: '150+', l: 'Exhibitors' }].map(({ v, l }) => (
             <div key={l}>
               <div className="stat-glow" style={{ fontFamily: '"Playfair Display", serif', fontSize: 38, fontWeight: 900, color: '#F5C842' }}>{v}</div>
               <div style={{ color: 'rgba(255,255,255,0.6)', fontFamily: 'Oswald, sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', fontSize: 12, marginTop: 4 }}>{l}</div>
@@ -108,7 +108,7 @@ export default function AboutPage() {
             <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: 1.8, maxWidth: 500, margin: '0 auto 24px', fontSize: 15 }}>A trusted name in dairy and food industry events since 2012. Connecting manufacturers, suppliers, buyers and professionals across India.</p>
             <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
               <Link href="/contact" className="btn-gold" style={{ padding: '12px 24px', borderRadius: 999, fontSize: 14, textDecoration: 'none' }}>Contact Us</Link>
-              <a href="https://forms.gle/m1o3G6CDSA3q1Jwv7" target="_blank" rel="noopener noreferrer" style={{ background: 'rgba(255,255,255,0.2)', border: '2px solid rgba(255,255,255,0.4)', color: 'white', padding: '12px 24px', borderRadius: 999, fontSize: 14, fontFamily: 'Oswald, sans-serif', fontWeight: 700, textDecoration: 'none', display: 'inline-block' }}>Book Your Stall</a>
+              <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer" style={{ background: 'rgba(255,255,255,0.2)', border: '2px solid rgba(255,255,255,0.4)', color: 'white', padding: '12px 24px', borderRadius: 999, fontSize: 14, fontFamily: 'Oswald, sans-serif', fontWeight: 700, textDecoration: 'none', display: 'inline-block' }}>Book Your Stall</a>
             </div>
           </div>
         </div>

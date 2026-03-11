@@ -200,7 +200,7 @@ export default async function ArticlePage({ params }) {
               <h3 style={{ fontFamily: '"Playfair Display", serif', fontSize: 18, fontWeight: 700, marginBottom: 8 }}>Godwa Expo 2026</h3>
               <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13, lineHeight: 1.6, marginBottom: 20 }}>5-7 December 2026, Pune. Join 15,000+ industry professionals.</p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                <a href="https://forms.gle/m1o3G6CDSA3q1Jwv7" target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ padding: '10px 16px', borderRadius: 12, fontSize: 13, textDecoration: 'none', justifyContent: 'center' }}>Book Stall</a>
+                <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ padding: '10px 16px', borderRadius: 12, fontSize: 13, textDecoration: 'none', justifyContent: 'center' }}>Book Stall</a>
                 <Link href="/visitors" style={{ background: 'rgba(255,255,255,0.15)', border: '1px solid rgba(255,255,255,0.3)', color: 'white', padding: '10px 16px', borderRadius: 12, fontSize: 13, textDecoration: 'none', fontFamily: 'Oswald, sans-serif', fontWeight: 700, textAlign: 'center' }}>Visitor Register</Link>
               </div>
             </div>

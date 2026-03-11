@@ -6,7 +6,6 @@ import Image from 'next/image'
 const stats = [
   { value: '15,000+', label: 'Visitors', icon: Users },
   { value: '150+', label: 'Exhibitors', icon: Building2 },
-  { value: '2,000', label: 'Sq Meter Area', icon: Globe },
   { value: '13th', label: 'Edition', icon: Award },
 ]
 
@@ -66,80 +65,113 @@ export default function HomeClient() {
       {/* ── HERO ── */}
       <section style={{ position: 'relative', height: '100vh', minHeight: 620, display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', background: '#0d1f35' }}>
 
-        {/* Video background */}
+        {/* Video background — poster shows while video loads (built-in browser behavior) */}
         <video
           autoPlay
           muted
           loop
           playsInline
+          preload="auto"
           poster="/Images/2025/6Y9A0093.JPG"
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }}
         >
-          <source src="/videos/DJI_20251220135550_0301_D.mp4" type="video/mp4" />
+          {/* Capital V in Videos — matches the actual folder name (case-sensitive on Linux/Vercel) */}
+          <source src="/Videos/DJI_20251220135550_0301_D.mp4" type="video/mp4" />
         </video>
 
-        {/* Dark overlay */}
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.65) 100%)' }} />
+        {/* Rich gradient overlay */}
+        <div style={{
+          position: 'absolute', inset: 0, zIndex: 2,
+          background: 'linear-gradient(160deg, rgba(10,22,40,0.72) 0%, rgba(0,0,0,0.28) 45%, rgba(13,14,0,0.62) 100%)',
+        }} />
+
+        {/* Bottom fade into next section */}
+        <div style={{
+          position: 'absolute', bottom: 0, left: 0, right: 0, height: 120, zIndex: 2,
+          background: 'linear-gradient(to top, #0d1f35 0%, transparent 100%)',
+        }} />
 
         {/* Hero content */}
         <div style={{ position: 'relative', zIndex: 10, textAlign: 'center', color: 'white', maxWidth: 1000, margin: '0 auto', padding: '0 20px' }}>
 
           {/* Top pill */}
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.28)', borderRadius: 999, padding: '8px 22px', marginBottom: 28, fontSize: 13, fontFamily: 'Oswald, sans-serif', letterSpacing: '0.1em', backdropFilter: 'blur(6px)', textTransform: 'uppercase' }}>
-            <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#F07840', display: 'inline-block', flexShrink: 0 }} />
+          <div style={{
+            display: 'inline-flex', alignItems: 'center', gap: 10,
+            background: 'rgba(255,255,255,0.08)',
+            border: '1px solid rgba(240,120,64,0.5)',
+            borderRadius: 999, padding: '9px 24px', marginBottom: 32,
+            fontSize: 12, fontFamily: 'Oswald, sans-serif',
+            letterSpacing: '0.12em', backdropFilter: 'blur(12px)',
+            textTransform: 'uppercase', color: 'rgba(255,255,255,0.92)',
+          }}>
+            <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#F07840', display: 'inline-block', flexShrink: 0, boxShadow: '0 0 8px #F07840' }} />
             India's Premier Dairy &amp; Food Industry Expo · 13th Edition
           </div>
 
           {/* Main heading */}
-          <h1 style={{ fontFamily: '"Playfair Display", serif', fontSize: 'clamp(2.6rem, 7vw, 5.2rem)', fontWeight: 900, lineHeight: 1.1, marginBottom: 20, textShadow: '0 4px 24px rgba(0,0,0,0.4)' }}>
-            <span style={{ color: '#F07840' }}>Godwa Dairy</span><br />
-            <span style={{ color: '#ffffff' }}>Expo 2026.</span>
+          <h1 style={{
+            fontFamily: '"Playfair Display", serif',
+            fontSize: 'clamp(2.8rem, 7.5vw, 5.6rem)',
+            fontWeight: 900, lineHeight: 1.08, marginBottom: 0,
+            textShadow: '0 4px 32px rgba(0,0,0,0.5)',
+          }}>
+            <span style={{ color: '#F07840', display: 'block' }}>Godwa Dairy</span>
+            <span style={{ color: '#ffffff', display: 'block' }}>Expo 2026.</span>
           </h1>
 
+          {/* Accent line */}
+          <div style={{ width: 72, height: 3, background: 'linear-gradient(90deg, #F07840, #ffd27a)', borderRadius: 99, margin: '20px auto 28px' }} />
+
           {/* Date · Venue · Time bar */}
-          <div style={{ display: 'inline-flex', alignItems: 'stretch', gap: 0, background: 'rgba(0,0,0,0.35)', border: '1.5px solid rgba(240,120,64,0.55)', borderRadius: 14, marginBottom: 32, backdropFilter: 'blur(10px)', overflow: 'hidden' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '14px 24px', borderRight: '1px solid rgba(255,255,255,0.15)' }}>
+          <div style={{
+            display: 'inline-flex', alignItems: 'stretch', gap: 0,
+            background: 'rgba(0,0,0,0.45)',
+            border: '1.5px solid rgba(240,120,64,0.5)',
+            borderRadius: 16, marginBottom: 32,
+            backdropFilter: 'blur(14px)', overflow: 'hidden',
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '14px 26px', borderRight: '1px solid rgba(255,255,255,0.12)' }}>
               <Calendar size={18} style={{ color: '#F07840', flexShrink: 0 }} />
               <div style={{ textAlign: 'left' }}>
-                <div style={{ fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 16, letterSpacing: '0.05em', color: '#fff', lineHeight: 1.2 }}>5 – 6 – 7</div>
-                <div style={{ fontFamily: 'Oswald, sans-serif', fontWeight: 500, fontSize: 12, color: 'rgba(255,255,255,0.7)', letterSpacing: '0.06em' }}>December 2026</div>
+                <div style={{ fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 17, letterSpacing: '0.05em', color: '#fff', lineHeight: 1.2 }}>5 – 6 – 7</div>
+                <div style={{ fontFamily: 'Oswald, sans-serif', fontWeight: 400, fontSize: 11, color: 'rgba(255,255,255,0.6)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>December 2026</div>
               </div>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '14px 24px', borderRight: '1px solid rgba(255,255,255,0.15)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '14px 26px', borderRight: '1px solid rgba(255,255,255,0.12)' }}>
               <MapPin size={18} style={{ color: '#F07840', flexShrink: 0 }} />
               <div style={{ textAlign: 'left' }}>
-                <div style={{ fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 16, letterSpacing: '0.05em', color: '#fff', lineHeight: 1.2 }}>Pune</div>
-                <div style={{ fontFamily: 'Oswald, sans-serif', fontWeight: 500, fontSize: 12, color: 'rgba(255,255,255,0.7)', letterSpacing: '0.06em' }}>Maharashtra</div>
+                <div style={{ fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 17, letterSpacing: '0.05em', color: '#fff', lineHeight: 1.2 }}>Pune</div>
+                <div style={{ fontFamily: 'Oswald, sans-serif', fontWeight: 400, fontSize: 11, color: 'rgba(255,255,255,0.6)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Maharashtra</div>
               </div>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '14px 24px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '14px 26px' }}>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F07840" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
               <div style={{ textAlign: 'left' }}>
-                <div style={{ fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 16, letterSpacing: '0.05em', color: '#fff', lineHeight: 1.2 }}>10 AM – 6 PM</div>
-                <div style={{ fontFamily: 'Oswald, sans-serif', fontWeight: 500, fontSize: 12, color: 'rgba(255,255,255,0.7)', letterSpacing: '0.06em' }}>Daily</div>
+                <div style={{ fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 17, letterSpacing: '0.05em', color: '#fff', lineHeight: 1.2 }}>10 AM – 6 PM</div>
+                <div style={{ fontFamily: 'Oswald, sans-serif', fontWeight: 400, fontSize: 11, color: 'rgba(255,255,255,0.6)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Daily</div>
               </div>
             </div>
           </div>
 
           {/* Sub-description */}
-          <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 17, maxWidth: 580, margin: '0 auto 36px', lineHeight: 1.75, textShadow: '0 2px 10px rgba(0,0,0,0.4)' }}>
-            India's biggest platform for Dairy, Bakery, Food Processing &amp; Feed Technology. Connect with 15,000+ professionals and 150+ leading exhibitors.
+          <p style={{ color: 'rgba(255,255,255,0.80)', fontSize: 17, maxWidth: 560, margin: '0 auto 38px', lineHeight: 1.8, textShadow: '0 2px 12px rgba(0,0,0,0.5)' }}>
+            India's 13th biggest platform for Dairy, Bakery, Food Processing &amp;Feedtech machinery Connect with <strong style={{ color: '#ffd27a' }}>15,000+ professionals</strong> and <strong style={{ color: '#ffd27a' }}>150+ leading exhibitors</strong>.
           </p>
 
           {/* CTA buttons */}
           <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a
-              href="https://forms.gle/m1o3G6CDSA3q1Jwv7"
+              href="https://forms.gle/XbNZWHxgzrxKC4YW8"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-gold"
-              style={{ padding: '15px 36px', borderRadius: 999, fontSize: 15, gap: 8, boxShadow: '0 8px 30px rgba(232,112,46,0.5)', textDecoration: 'none' }}
+              style={{ padding: '16px 40px', borderRadius: 999, fontSize: 15, gap: 8, boxShadow: '0 8px 36px rgba(240,120,64,0.55)', textDecoration: 'none', fontWeight: 700 }}
             >
               Book Your Space Now <ArrowRight size={17} />
             </a>
             <Link
               href="/visitors"
-              style={{ background: 'rgba(255,255,255,0.15)', border: '2px solid rgba(255,255,255,0.45)', color: 'white', padding: '15px 36px', borderRadius: 999, fontSize: 15, fontFamily: 'Oswald, sans-serif', fontWeight: 700, letterSpacing: '0.05em', display: 'inline-flex', alignItems: 'center', gap: 8, transition: 'all 0.3s', textDecoration: 'none', backdropFilter: 'blur(6px)' }}
+              style={{ background: 'rgba(255,255,255,0.12)', border: '2px solid rgba(255,255,255,0.4)', color: 'white', padding: '16px 40px', borderRadius: 999, fontSize: 15, fontFamily: 'Oswald, sans-serif', fontWeight: 700, letterSpacing: '0.05em', display: 'inline-flex', alignItems: 'center', gap: 8, transition: 'all 0.3s', textDecoration: 'none', backdropFilter: 'blur(8px)' }}
             >
               Visitor Registration <ChevronRight size={17} />
             </Link>
@@ -147,9 +179,9 @@ export default function HomeClient() {
         </div>
 
         {/* Scroll indicator */}
-        <div style={{ position: 'absolute', bottom: 28, left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6, zIndex: 10, opacity: 0.7 }}>
-          <span style={{ fontFamily: 'Oswald, sans-serif', fontSize: 11, letterSpacing: '0.15em', color: 'white', textTransform: 'uppercase' }}>Scroll</span>
-          <div style={{ width: 1, height: 36, background: 'linear-gradient(to bottom, white, transparent)' }} />
+        <div style={{ position: 'absolute', bottom: 36, left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, zIndex: 10, opacity: 0.65 }}>
+          <span style={{ fontFamily: 'Oswald, sans-serif', fontSize: 10, letterSpacing: '0.2em', color: 'white', textTransform: 'uppercase' }}>Scroll</span>
+          <div style={{ width: 1, height: 40, background: 'linear-gradient(to bottom, white, transparent)' }} />
         </div>
       </section>
 
@@ -183,51 +215,17 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* ── INDUSTRIES ── */}
-      <section style={{ padding: '80px 0', background: '#F5FAF7', overflow: 'hidden' }}>
-        <div style={{ textAlign: 'center', marginBottom: 48, padding: '0 16px' }}>
-          <span style={{ color: '#E8702E', fontFamily: 'Oswald, sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', fontSize: 13, fontWeight: 600 }}>What We Cover</span>
-          <h2 className="section-title" style={{ fontFamily: '"Playfair Display", serif', fontSize: 38, fontWeight: 700, color: '#2D6A4F', marginTop: 8 }}>Industry Sectors</h2>
-        </div>
 
-        {/* Auto-scrolling carousel */}
-        <div style={{ overflow: 'hidden', width: '100%' }}>
-          <div
-            className="industry-scroll-track"
-            style={{ display: 'flex', gap: 24, width: 'max-content' }}
-          >
-            {industries.map((ind, i) => (
-              <div
-                key={i}
-                style={{ width: 280, flexShrink: 0, borderRadius: 20, overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.12)', position: 'relative', cursor: 'pointer' }}
-              >
-                <div style={{ position: 'relative', height: 220 }}>
-                  <img
-                    src={ind.bg}
-                    alt={ind.title}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-                  />
-                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.15) 60%, transparent 100%)' }} />
-                </div>
-                <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '16px 20px' }}>
-                  <h3 style={{ fontFamily: '"Playfair Display", serif', fontSize: 20, fontWeight: 700, color: '#fff', marginBottom: 4 }}>{ind.title}</h3>
-                  {/* <p style={{ color: 'rgba(255,255,255,0.78)', fontSize: 12, lineHeight: 1.5 }}>{ind.caption}</p> */}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── CTA BAND ── */}
       <section style={{ padding: '48px 0', background: 'linear-gradient(135deg, #2D6A4F, #40916C)' }}>
         <div style={{ maxWidth: 1000, margin: '0 auto', padding: '0 16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 24, flexWrap: 'wrap' }}>
           <div>
-            <h3 style={{ fontFamily: '"Playfair Display", serif', fontSize: 26, fontWeight: 700, color: 'white' }}>Ready to Participate?</h3>
-            <p style={{ color: 'rgba(255,255,255,0.72)', marginTop: 4, fontSize: 14 }}>Limited stalls available -- book before 30 September 2026</p>
+            <h3 style={{ fontFamily: '"Playfair Display", serif', fontSize: 26, fontWeight: 700, color: 'white' }}>Book your space now!!?</h3>
+            <p style={{ color: 'rgba(255,255,255,0.72)', marginTop: 4, fontSize: 14 }}>Limited stalls available for exhibitors</p>
           </div>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-            <a href="https://forms.gle/m1o3G6CDSA3q1Jwv7" target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ padding: '12px 28px', borderRadius: 999, fontSize: 14, gap: 8 }}>
+            <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ padding: '12px 28px', borderRadius: 999, fontSize: 14, gap: 8 }}>
               Exhibitor Registration <ArrowRight size={15} />
             </a>
             <Link href="/visitors" style={{ background: 'rgba(255,255,255,0.2)', border: '2px solid rgba(255,255,255,0.4)', color: 'white', padding: '12px 28px', borderRadius: 999, fontSize: 14, fontFamily: 'Oswald, sans-serif', fontWeight: 700, display: 'inline-flex', alignItems: 'center', textDecoration: 'none', transition: 'all 0.3s' }}>
@@ -240,19 +238,19 @@ export default function HomeClient() {
       {/* ── WHY CHOOSE US ── */}
       <section className="dairy-pattern" style={{ padding: '80px 0', background: '#FFFFFF' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 16px' }}>
-          <div style={{ textAlign: 'center', marginBottom: 48 }}>
-            <span style={{ color: '#E8702E', fontFamily: 'Oswald, sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', fontSize: 13 }}>Why Godwa Expo</span>
-            <h2 className="section-title" style={{ fontFamily: '"Playfair Display", serif', fontSize: 38, fontWeight: 700, color: '#2D6A4F', marginTop: 8 }}>Why Choose Us?</h2>
-            <p style={{ color: '#666', maxWidth: 600, margin: '16px auto 0', fontSize: 15, lineHeight: 1.7 }}>
+          <div style={{ textAlign: 'center', marginBottom: 52 }}>
+            <span style={{ color: '#E8702E', fontFamily: 'Oswald, sans-serif', letterSpacing: '0.15em', textTransform: 'uppercase', fontSize: 14, fontWeight: 600 }}>Why Godwa Expo</span>
+            <h2 className="section-title" style={{ fontFamily: 'Oswald, sans-serif', fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 700, color: '#2D6A4F', marginTop: 10, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Why Choose Us?</h2>
+            <p style={{ color: '#555', maxWidth: 620, margin: '18px auto 0', fontSize: 17, lineHeight: 1.75, fontFamily: 'Oswald, sans-serif', fontWeight: 400, letterSpacing: '0.02em' }}>
               Godwa Dairy Expo is the biggest platform for dairy, bakery and allied industries, connecting exhibitors with targeted audiences.
             </p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24 }}>
             {whyChoose.map((item) => (
-              <div key={item.title} className="card-hover" style={{ background: 'white', borderRadius: 20, padding: 28, boxShadow: '0 4px 16px rgba(0,0,0,0.06)', border: '1px solid #EEF7F1' }}>
-                <div style={{ fontSize: 40, marginBottom: 12 }}>{item.icon}</div>
-                <h3 style={{ fontFamily: '"Playfair Display", serif', fontSize: 18, fontWeight: 700, color: '#2D6A4F', marginBottom: 8 }}>{item.title}</h3>
-                <p style={{ color: '#666', fontSize: 13, lineHeight: 1.7 }}>{item.desc}</p>
+              <div key={item.title} className="card-hover" style={{ background: 'white', borderRadius: 20, padding: 32, boxShadow: '0 4px 16px rgba(0,0,0,0.06)', border: '1px solid #EEF7F1' }}>
+                <div style={{ fontSize: 42, marginBottom: 14 }}>{item.icon}</div>
+                <h3 style={{ fontFamily: 'Oswald, sans-serif', fontSize: 20, fontWeight: 700, color: '#2D6A4F', marginBottom: 10, letterSpacing: '0.04em', textTransform: 'uppercase' }}>{item.title}</h3>
+                <p style={{ color: '#666', fontSize: 15, lineHeight: 1.75, fontFamily: 'Oswald, sans-serif', fontWeight: 400 }}>{item.desc}</p>
               </div>
             ))}
           </div>
@@ -266,7 +264,7 @@ export default function HomeClient() {
             <span style={{ color: '#F07840', fontFamily: 'Oswald, sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', fontSize: 13 }}>Past Events</span>
             <h2 className="section-title" style={{ fontFamily: '"Playfair Display", serif', fontSize: 38, fontWeight: 700, color: 'white', marginTop: 8 }}>View Gallery</h2>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 12 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 14 }}>
             {galleryPreviews.map((src, i) => (
               <div key={i} style={{ borderRadius: 14, overflow: 'hidden', aspectRatio: '1/1' }}>
                 <img src={src} alt={`Gallery ${i + 1}`} className="gallery-img" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
@@ -300,43 +298,51 @@ export default function HomeClient() {
       </section>
 
       {/* ── VENUE ── */}
-      <section style={{ padding: '80px 0', background: '#F5FAF7' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 16px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', gap: 48, alignItems: 'center' }}>
-          <div>
-            <span style={{ color: '#E8702E', fontFamily: 'Oswald, sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', fontSize: 13 }}>Event Location</span>
-            <h2 style={{ fontFamily: '"Playfair Display", serif', fontSize: 36, fontWeight: 700, color: '#2D6A4F', margin: '8px 0 20px' }}>Venue & Dates</h2>
-            {[
-              { icon: '📅', title: 'Event Dates', val: '5, 6 & 7 December 2026', sub: '10:00 AM - 6:00 PM Daily' },
-              { icon: '📍', title: 'Venue', val: 'Pune, Maharashtra', sub: "India's Industrial Capital" },
-            ].map((item) => (
-              <div key={item.title} style={{ display: 'flex', gap: 16, alignItems: 'flex-start', background: 'white', borderRadius: 16, padding: 20, marginBottom: 16, boxShadow: '0 2px 12px rgba(0,0,0,0.06)', border: '1px solid #EEF7F1' }}>
-                <div style={{ fontSize: 28 }}>{item.icon}</div>
-                <div>
-                  <div style={{ fontFamily: 'Oswald, sans-serif', color: '#2D6A4F', fontWeight: 700, textTransform: 'uppercase', fontSize: 12, letterSpacing: '0.08em' }}>{item.title}</div>
-                  <div style={{ fontFamily: '"Playfair Display", serif', fontSize: 20, fontWeight: 700, color: '#2D6A4F' }}>{item.val}</div>
-                  <div style={{ color: '#999', fontSize: 13 }}>{item.sub}</div>
-                </div>
-              </div>
-            ))}
-            <div style={{ display: 'flex', gap: 12, marginTop: 8, flexWrap: 'wrap' }}>
-              <a href="https://forms.gle/m1o3G6CDSA3q1Jwv7" target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ padding: '12px 24px', borderRadius: 999, fontSize: 14, gap: 8, textDecoration: 'none' }}>
-                Register as Exhibitor <ArrowRight size={14} />
-              </a>
-              <Link href="/contact" className="btn-blue" style={{ padding: '12px 24px', borderRadius: 999, fontSize: 14, textDecoration: 'none' }}>
-                Get Directions
-              </Link>
-            </div>
+      <section style={{ padding: '96px 0', background: 'linear-gradient(160deg, #F5FAF7 0%, #EAF4EE 100%)' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px' }}>
+
+          {/* Section label + heading */}
+          <div style={{ textAlign: 'center', marginBottom: 56 }}>
+            <span style={{ color: '#E8702E', fontFamily: 'Oswald, sans-serif', letterSpacing: '0.15em', textTransform: 'uppercase', fontSize: 14, fontWeight: 600 }}>Event Location</span>
+            <h2 style={{ fontFamily: 'Oswald, sans-serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 700, color: '#2D6A4F', margin: '10px 0 0', letterSpacing: '0.06em', textTransform: 'uppercase' }}>Venue &amp; Dates</h2>
           </div>
-          <div style={{ borderRadius: 20, overflow: 'hidden', boxShadow: '0 20px 60px rgba(0,0,0,0.15)', height: 360 }}>
-            <iframe
-              src="https://maps.google.com/maps?q=Mahalaxmi+Lawns,+100+FT+DP+Road,+Karvenagar,+Pune+411052&output=embed&z=16"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              title="Venue Map"
-            />
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(380px, 1fr))', gap: 52, alignItems: 'center' }}>
+            <div>
+              {[
+                { icon: '📅', title: 'Event Dates', val: '5, 6 & 7 December 2026', sub: '10:00 AM – 6:00 PM Daily' },
+                { icon: '📍', title: 'Venue', val: 'Pune, Maharashtra', sub: "India's Industrial Capital" },
+              ].map((item) => (
+                <div key={item.title} style={{ display: 'flex', gap: 20, alignItems: 'flex-start', background: 'white', borderRadius: 20, padding: '24px 28px', marginBottom: 20, boxShadow: '0 4px 24px rgba(45,106,79,0.10)', border: '1.5px solid #D9EDE2' }}>
+                  <div style={{ fontSize: 36, lineHeight: 1, flexShrink: 0, marginTop: 2 }}>{item.icon}</div>
+                  <div>
+                    <div style={{ fontFamily: 'Oswald, sans-serif', color: '#E8702E', fontWeight: 700, textTransform: 'uppercase', fontSize: 13, letterSpacing: '0.12em', marginBottom: 6 }}>{item.title}</div>
+                    <div style={{ fontFamily: 'Oswald, sans-serif', fontSize: 22, fontWeight: 700, color: '#2D6A4F', lineHeight: 1.2, marginBottom: 4, letterSpacing: '0.03em' }}>{item.val}</div>
+                    <div style={{ color: '#888', fontSize: 15, fontFamily: 'Oswald, sans-serif', letterSpacing: '0.04em' }}>{item.sub}</div>
+                  </div>
+                </div>
+              ))}
+              <div style={{ display: 'flex', gap: 12, marginTop: 12, flexWrap: 'wrap' }}>
+                <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ padding: '14px 28px', borderRadius: 999, fontSize: 15, gap: 8, textDecoration: 'none' }}>
+                  Register as Exhibitor <ArrowRight size={15} />
+                </a>
+                <Link href="/contact" className="btn-blue" style={{ padding: '14px 28px', borderRadius: 999, fontSize: 15, textDecoration: 'none' }}>
+                  Get Directions
+                </Link>
+              </div>
+            </div>
+
+            <div style={{ borderRadius: 24, overflow: 'hidden', boxShadow: '0 24px 64px rgba(0,0,0,0.14)', height: 400 }}>
+              <iframe
+                src="https://maps.google.com/maps?q=Mahalaxmi+Lawns,+100+FT+DP+Road,+Karvenagar,+Pune+411052&output=embed&z=16"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                title="Venue Map"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -391,23 +397,21 @@ export default function HomeClient() {
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, marginBottom: 16 }}>
             <Image src="/Images/logo_2.jpg" alt="Godwa Dairy Expo Logo" width={96} height={96} />
           </div>
-          <h2 style={{ fontFamily: '"Playfair Display", serif', fontSize: 'clamp(2rem, 5vw, 3.2rem)', fontWeight: 900, marginBottom: 16 }}>
+          <h2 style={{ fontFamily: 'Oswald, sans-serif', fontSize: 'clamp(2.4rem, 6vw, 4rem)', fontWeight: 700, marginBottom: 18, letterSpacing: '0.04em', textTransform: 'uppercase', lineHeight: 1.15 }}>
             Don't Miss <span style={{ color: '#F07840' }}>Godwa Expo 2026!</span>
           </h2>
-          <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: 17, maxWidth: 550, margin: '0 auto 32px', lineHeight: 1.7 }}>
-            Join 15,000+ professionals and 150+ leading exhibitors at India's most impactful dairy event.
+          <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 19, maxWidth: 580, margin: '0 auto 36px', lineHeight: 1.75, fontFamily: 'Oswald, sans-serif', fontWeight: 400, letterSpacing: '0.03em' }}>
+            Join 15,000+ professionals and 150+ leading exhibitors at India's most impactful Dairy Machinery Expo.
           </p>
           <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="https://forms.gle/m1o3G6CDSA3q1Jwv7" target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ padding: '16px 36px', borderRadius: 999, fontSize: 15, gap: 8, textDecoration: 'none', boxShadow: '0 8px 30px rgba(0,0,0,0.3)' }}>
-              Book Your Stall Now <ArrowRight size={17} />
+            <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ padding: '16px 40px', borderRadius: 999, fontSize: 16, gap: 8, textDecoration: 'none', boxShadow: '0 8px 30px rgba(0,0,0,0.3)' }}>
+              Book Your Stall Now <ArrowRight size={18} />
             </a>
-            <Link href="/visitors" style={{ background: 'rgba(255,255,255,0.2)', border: '2px solid rgba(255,255,255,0.5)', color: 'white', padding: '16px 36px', borderRadius: 999, fontSize: 15, fontFamily: 'Oswald, sans-serif', fontWeight: 700, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', transition: 'all 0.3s' }}>
+            <Link href="/visitors" style={{ background: 'rgba(255,255,255,0.2)', border: '2px solid rgba(255,255,255,0.5)', color: 'white', padding: '16px 40px', borderRadius: 999, fontSize: 16, fontFamily: 'Oswald, sans-serif', fontWeight: 700, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', letterSpacing: '0.05em', transition: 'all 0.3s' }}>
               Register as Visitor
             </Link>
           </div>
-          <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: 12, marginTop: 20, fontFamily: 'Oswald, sans-serif', letterSpacing: '0.06em' }}>
-            Last date for stall booking: 30 September 2026 · Limited space available
-          </p>
+
         </div>
       </section>
 

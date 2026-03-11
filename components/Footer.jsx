@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { MapPin, Phone, Mail } from 'lucide-react'
+import { MapPin, Phone, Mail, Calendar } from 'lucide-react'
 import Image from 'next/image'
 
 export default function Footer() {
@@ -17,10 +17,10 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-3 mb-4">
             <Image
-              src="/Images/logo_1.jpg"
+              src="/Images/logo_2.jpg"
               alt="Godwa Dairy Expo 2026"
-              width={80}
-              height={80}
+              width={100}
+              height={100}
               className="rounded-full shadow-lg object-contain"
             />
             <div>
@@ -71,6 +71,10 @@ export default function Footer() {
               <Mail size={17} style={{ color: '#F5C842', flexShrink: 0 }} />
               <a href="mailto:dairyexpo@gmail.com" className="hover:text-yellow-400 transition-colors">dairyexpo@gmail.com</a>
             </li>
+            <li className="flex items-center gap-3">
+              <Calendar size={17} style={{ color: '#F5C842', flexShrink: 0 }} />
+              <span>5, 6 & 7 December 2026 ·</span>
+            </li>
           </ul>
           <div className="mt-5">
             <a href="https://forms.gle/m1o3G6CDSA3q1Jwv7" target="_blank" rel="noopener noreferrer" className="btn-gold px-5 py-2.5 rounded-full text-sm">
@@ -84,9 +88,9 @@ export default function Footer() {
         <span>© 2026 Godwa Prakashan Pvt Ltd. All rights reserved.</span>
         <span>Presented by <strong style={{ color: '#F5C842' }}>Godwa Institute</strong> · Pune, Maharashtra</span>
         {/* Bottom-right corner image */}
-        <div style={{ position: 'absolute', bottom: 8, right: 16, marginBottom:65 }}>
+        <div style={{ position: 'absolute', bottom: 8, right: 16, marginBottom: 65 }}>
           <Image
-            src="/Images/Godwa-Prakashan.jpg"
+            src="/Images/Godwa-Prakashan-removebg-preview.png"
             alt="Footer Logo"
             width={120}
             height={120}

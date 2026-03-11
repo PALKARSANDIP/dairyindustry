@@ -157,10 +157,10 @@ export default async function NewsPage() {
       {/* CTA */}
       <section style={{ padding: '56px 0', background: '#1A3A5C', textAlign: 'center' }}>
         <div style={{ maxWidth: 600, margin: '0 auto', padding: '0 16px' }}>
-          <h2 style={{ fontFamily: '"Playfair Display", serif', fontSize: 26, fontWeight: 700, color: 'white', marginBottom: 10 }}>Ready to Participate?</h2>
+          <h2 style={{ fontFamily: '"Playfair Display", serif', fontSize: 26, fontWeight: 700, color: 'white', marginBottom: 10 }}>Book your space now!!?</h2>
           <p style={{ color: 'rgba(255,255,255,0.65)', marginBottom: 24, fontSize: 14 }}>Book your stall or register as a visitor for Godwa Dairy Expo 2026</p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="https://forms.gle/m1o3G6CDSA3q1Jwv7" target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ padding: '12px 28px', borderRadius: 999, fontSize: 14, textDecoration: 'none', gap: 8 }}>
+            <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ padding: '12px 28px', borderRadius: 999, fontSize: 14, textDecoration: 'none', gap: 8 }}>
               Book Exhibitor Stall <ArrowRight size={15} />
             </a>
             <Link href="/visitors" style={{ background: 'rgba(255,255,255,0.15)', border: '2px solid rgba(255,255,255,0.35)', color: 'white', padding: '12px 28px', borderRadius: 999, fontSize: 14, fontFamily: 'Oswald, sans-serif', fontWeight: 700, textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>

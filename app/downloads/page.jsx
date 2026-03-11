@@ -4,17 +4,16 @@ import { Download, FileText, Map, Image, List, BookOpen, AlignLeft } from 'lucid
 const docs = [
   { icon: Map, title: 'Exhibition Layout', desc: 'Floor plan and stall layout map for Godwa Expo 2026', tag: 'PDF', color: '#D4A017', size: '2.4 MB' },
   { icon: BookOpen, title: 'Official Brochure', desc: 'Complete information brochure about Godwa Dairy Expo 2026', tag: 'PDF', color: '#D4A017', size: '5.1 MB' },
-  { icon: List, title: 'Exhibitor List 2025', desc: 'Complete list of exhibitors from the previous 2025 edition', tag: 'PDF', color: '#0D7377', size: '1.8 MB' },
+  { icon: List, title: 'Exhibitor List 2025', desc: 'Complete list of exhibitors from the previous 2025 edition', tag: 'PDF', color: '#0D7377', size: '1.8 MB', href: '/Exhibitor-list-2025-Final.pdf' },
   { icon: Image, title: 'Stall Banner Guidelines', desc: 'Specifications and size guidelines for stall banners and flex printing', tag: 'PDF', color: '#1A3A5C', size: '0.9 MB' },
-  { icon: AlignLeft, title: 'Terms & Conditions', desc: 'Overall terms and conditions for exhibitors and visitors', tag: 'PDF', color: '#4CAF50', size: '1.2 MB' },
-  { icon: FileText, title: 'Stall Allotment Guide', desc: 'Guidelines for stall allotment process and selection criteria', tag: 'PDF', color: '#1A3A5C', size: '0.8 MB' },
+  { icon: AlignLeft, title: 'Terms & Conditions', desc: 'Overall terms and conditions for exhibitors and visitors', tag: 'PDF', color: '#4CAF50', size: '1.2 MB', href: '/DOC-20260309-WA0016.pdf' },
+  // { icon: FileText, title: 'Stall Allotment Guide', desc: 'Guidelines for stall allotment process and selection criteria', tag: 'PDF', color: '#1A3A5C', size: '0.8 MB' },
 ]
 
 const logos = [
-  { label: 'Blue Logo', bg: '#1A3A5C', text: 'white' },
-  { label: 'Black Logo', bg: '#1a1a1a', text: 'white' },
-  { label: 'White Logo', bg: '#f5f5f5', text: '#1A3A5C' },
-  { label: 'Cow Mascot', bg: '#FFF8EE', text: '#1A3A5C' },
+  { label: 'Black & White', bg: '#1a1a1a', img: '/Images/black_logo.jpeg', file: '/Images/black_logo.jpeg' },
+  { label: 'Blue Logo', bg: '#1A3A5C', img: '/Images/blue_logo.jpeg', file: '/Images/blue_logo.jpeg' },
+  { label: 'cow Mascot', bg: '#f0f0f0', img: '/Images/cow_mascot.jpeg', file: '/Images/cow_mascot.jpeg' },
 ]
 
 export const metadata = buildMetadata({
@@ -55,9 +54,15 @@ export default function DownloadsPage() {
                   <p style={{ color: '#777', fontSize: 12, lineHeight: 1.6, marginBottom: 12 }}>{doc.desc}</p>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                     <span style={{ color: '#bbb', fontSize: 11 }}>{doc.size}</span>
-                    <button className="btn-blue" style={{ padding: '7px 16px', borderRadius: 999, fontSize: 12, border: 'none', cursor: 'pointer', gap: 6 }}>
-                      <Download size={12} /> Download
-                    </button>
+                    {doc.href ? (
+                      <a href={doc.href} target="_blank" rel="noopener noreferrer" download className="btn-blue" style={{ padding: '7px 16px', borderRadius: 999, fontSize: 12, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                        <Download size={12} /> Download
+                      </a>
+                    ) : (
+                      <button className="btn-blue" style={{ padding: '7px 16px', borderRadius: 999, fontSize: 12, border: 'none', cursor: 'pointer', gap: 6 }}>
+                        <Download size={12} /> Download
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>
@@ -74,20 +79,14 @@ export default function DownloadsPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 16 }}>
             {logos.map(l => (
               <div key={l.label} className="card-hover" style={{ background: 'white', borderRadius: 18, overflow: 'hidden', boxShadow: '0 4px 16px rgba(0,0,0,0.06)', border: '1px solid #FFF8EE' }}>
-                <div style={{ height: 100, background: l.bg, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: l.text }}>
-                  <div style={{ fontSize: 28 }}>🥛</div>
-                  <div style={{ fontFamily: '"Playfair Display", serif', fontWeight: 700, fontSize: 14 }}>GODWA</div>
-                  <div style={{ fontFamily: 'Oswald, sans-serif', fontSize: 10, letterSpacing: '0.15em', opacity: 0.7 }}>EXPO</div>
+                <div style={{ height: 130, background: l.bg, display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
+                  <img src={l.img} alt={l.label} style={{ height: '100%', width: '100%', objectFit: 'contain', padding: 12 }} />
                 </div>
                 <div style={{ padding: 16, textAlign: 'center' }}>
                   <h3 style={{ fontWeight: 700, color: '#1A3A5C', fontSize: 13, marginBottom: 10 }}>{l.label}</h3>
-                  <div style={{ display: 'flex', gap: 8, justifyContent: 'center' }}>
-                    {['PDF', 'PNG'].map(fmt => (
-                      <button key={fmt} className="btn-gold" style={{ padding: '6px 14px', borderRadius: 999, fontSize: 11, border: 'none', cursor: 'pointer', gap: 4 }}>
-                        <Download size={10} /> {fmt}
-                      </button>
-                    ))}
-                  </div>
+                  <a href={l.file} download target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ padding: '6px 14px', borderRadius: 999, fontSize: 11, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                    <Download size={10} /> PNG
+                  </a>
                 </div>
               </div>
             ))}
