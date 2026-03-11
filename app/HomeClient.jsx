@@ -286,7 +286,7 @@ export default function HomeClient() {
           <h2 className="section-title" style={{ fontFamily: '"Playfair Display", serif', fontSize: 36, fontWeight: 700, color: '#2D6A4F', margin: '8px 0 32px' }}>Godwa Expo 2025 Highlights</h2>
           <div style={{ borderRadius: 20, overflow: 'hidden', boxShadow: '0 20px 60px rgba(0,0,0,0.15)', aspectRatio: '16/9', background: '#1A3A5C' }}>
             <iframe
-              src="https://www.youtube.com/embed/BZ02_j6PbFI"
+              src="https://www.youtube.com/embed/DRadPtfjRBs"
               title="Godwa Expo 2025 Highlights"
               style={{ width: '100%', height: '100%', border: 'none' }}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
