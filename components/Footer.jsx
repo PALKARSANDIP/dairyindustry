@@ -39,8 +39,8 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             {[
               ['Home', '/'], ['About Godwa Expo', '/about'], ['Exhibitors', '/exhibitors'],
-              ['Visitor Registration', '/visitors'], ['News & Updates', '/news'], ['Photo Gallery', '/gallery'],
-              ['Downloads', '/downloads'], ['Services', '/services'], ['Contact Us', '/contact'],
+              ['Visitor Registration', '/visitors'], ['Photo Gallery', '/gallery'],
+              ['Downloads', '/downloads'], ['Services', '/services'], ['Contact Us', '/contact'], ['News & Updates', '/news'],
             ].map(([label, href]) => (
               <li key={label}>
                 <Link href={href} style={{ color: 'rgba(255,255,255,0.65)' }}

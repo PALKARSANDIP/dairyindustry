@@ -85,7 +85,7 @@ export default async function NewsPage() {
         <section style={{ padding: '64px 0', background: '#FFF8EE' }}>
           <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 16px' }}>
             <h2 style={{ fontFamily: '"Playfair Display", serif', fontSize: 26, fontWeight: 700, color: '#1A3A5C', marginBottom: 28 }}>Featured</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: 28 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%,400px), 1fr))', gap: 28 }}>
               {featured.map(article => (
                 <Link key={article._id} href={`/news/${article.slug.current}`} style={{ textDecoration: 'none' }}>
                   <article className="card-hover" style={{ background: 'white', borderRadius: 20, overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.08)', border: '1px solid #FFF8EE', height: '100%' }}>
@@ -123,11 +123,11 @@ export default async function NewsPage() {
             <div style={{ display: 'grid', gap: 20 }}>
               {rest.map(article => (
                 <Link key={article._id} href={`/news/${article.slug.current}`} style={{ textDecoration: 'none' }}>
-                  <article className="card-hover" style={{ background: 'white', borderRadius: 18, overflow: 'hidden', boxShadow: '0 2px 12px rgba(0,0,0,0.06)', border: '1px solid #FFF8EE', display: 'grid', gridTemplateColumns: 'minmax(0,240px) 1fr' }}>
+                  <article className="card-hover grid grid-cols-1 sm:grid-cols-[200px_1fr] md:grid-cols-[240px_1fr]" style={{ background: 'white', borderRadius: 18, overflow: 'hidden', boxShadow: '0 2px 12px rgba(0,0,0,0.06)', border: '1px solid #FFF8EE' }}>
                     {article.coverImage?.asset?.url ? (
-                      <img src={article.coverImage.asset.url + '?w=480&h=320&fit=crop'} alt={article.coverImage.alt || article.title} className="gallery-img" style={{ width: '100%', height: '100%', minHeight: 160, objectFit: 'cover' }} />
+                      <img src={article.coverImage.asset.url + '?w=480&h=320&fit=crop'} alt={article.coverImage.alt || article.title} className="gallery-img w-full object-cover" style={{ height: '200px' }} />
                     ) : (
-                      <div style={{ background: '#FFF8EE', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 40 }}>📰</div>
+                      <div className="flex items-center justify-center text-4xl h-[200px] sm:h-full" style={{ background: '#FFF8EE' }}>📰</div>
                     )}
                     <div style={{ padding: '20px 24px' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8 }}>

@@ -1,95 +1,38 @@
 // app/sitemap.js
 // Auto-generates /sitemap.xml — submitted to Google Search Console
+// Blog URLs are fetched live from Sanity so sitemap updates automatically
 
 import { SITE } from '@/lib/seo'
-import { newsArticles } from '@/lib/news'
+import { getAllArticleSlugs } from '@/lib/sanity.queries'
 
-export default function sitemap() {
+export default async function sitemap() {
   const now = new Date()
 
   // ── Static pages ──
   const staticPages = [
-    {
-      url: SITE.url,
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 1.0,
-    },
-    {
-      url: `${SITE.url}/exhibitors`,
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${SITE.url}/visitors`,
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${SITE.url}/gallery`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${SITE.url}/gallery?year=2022`,
-      lastModified: now,
-      changeFrequency: 'yearly',
-      priority: 0.5,
-    },
-    {
-      url: `${SITE.url}/gallery?year=2023`,
-      lastModified: now,
-      changeFrequency: 'yearly',
-      priority: 0.5,
-    },
-    {
-      url: `${SITE.url}/gallery?year=2024`,
-      lastModified: now,
-      changeFrequency: 'yearly',
-      priority: 0.5,
-    },
-    {
-      url: `${SITE.url}/gallery?year=2025`,
-      lastModified: now,
-      changeFrequency: 'yearly',
-      priority: 0.6,
-    },
-    {
-      url: `${SITE.url}/downloads`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: `${SITE.url}/services`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${SITE.url}/news`,
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${SITE.url}/contact`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
+    { url: SITE.url,                      lastModified: now, changeFrequency: 'weekly',  priority: 1.0 },
+    { url: `${SITE.url}/exhibitors`,      lastModified: now, changeFrequency: 'weekly',  priority: 0.9 },
+    { url: `${SITE.url}/visitors`,        lastModified: now, changeFrequency: 'weekly',  priority: 0.9 },
+    { url: `${SITE.url}/news`,            lastModified: now, changeFrequency: 'weekly',  priority: 0.8 },
+    { url: `${SITE.url}/gallery`,         lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${SITE.url}/services`,        lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${SITE.url}/downloads`,       lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${SITE.url}/contact`,         lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
   ]
 
-  // ── News/article pages (dynamic) ──
-  const newsPages = newsArticles.map(article => ({
-    url: `${SITE.url}/news/${article.slug}`,
-    lastModified: new Date(article.date),
-    changeFrequency: 'monthly',
-    priority: 0.7,
-  }))
+  // ── News/blog pages — auto-fetched from Sanity ──
+  let newsPages = []
+  try {
+    const slugs = await getAllArticleSlugs()
+    newsPages = slugs.map(({ slug, publishedAt }) => ({
+      url: `${SITE.url}/news/${slug}`,
+      lastModified: publishedAt ? new Date(publishedAt) : now,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    }))
+  } catch {
+    // Sanity not reachable during build — skip news URLs
+  }
 
   return [...staticPages, ...newsPages]
 }
