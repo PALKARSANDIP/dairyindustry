@@ -2,6 +2,11 @@
 // Auto-generates /sitemap.xml — submitted to Google Search Console
 // Blog URLs are fetched live from Sanity so sitemap updates automatically
 
+// Force dynamic rendering so new Sanity articles appear immediately
+// without needing a redeploy
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
 import { SITE } from '@/lib/seo'
 import { getAllArticleSlugs } from '@/lib/sanity.queries'
 
