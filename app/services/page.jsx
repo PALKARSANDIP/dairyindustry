@@ -75,7 +75,7 @@ export default function ServicesPage() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 16px' }}>
           <h2 className="section-title" style={{ fontFamily: '"Playfair Display", serif', fontSize: 28, fontWeight: 700, color: '#1A3A5C', textAlign: 'center', marginBottom: 40 }}>Free Visitor Amenities</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 24 }}>
-            {[{ icon: '🅿️', title: 'Free Parking', desc: 'Ample free parking for cars and two-wheelers at the venue' }, { icon: '☕', title: 'Free Tea Coupon', desc: 'All registered visitors receive a complimentary tea/beverage coupon' }, { icon: '🙏', title: 'Maha Prasad', desc: 'Traditional Maha Prasad distributed to all event participants' }].map(v => (
+            {[{ icon: '🅿️', title: 'Free Parking', desc: 'Ample free parking for cars and two-wheelers at the venue' }, { icon: '☕', title: 'Free Coupon', desc: 'All registered visitors receive a complimentary tea/beverage coupon' }, { icon: '🙏', title: 'Free Entry', desc: 'Traditional Maha Prasad distributed to all event participants' }].map(v => (
               <div key={v.title} className="card-hover" style={{ background: 'white', borderRadius: 20, padding: 32, textAlign: 'center', boxShadow: '0 4px 16px rgba(0,0,0,0.06)', border: '1px solid #FFF8EE' }}>
                 <div style={{ fontSize: 48, marginBottom: 12 }}>{v.icon}</div>
                 <h3 style={{ fontFamily: '"Playfair Display", serif', fontSize: 18, fontWeight: 700, color: '#1A3A5C', marginBottom: 8 }}>{v.title}</h3>

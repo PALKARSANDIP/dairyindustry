@@ -89,92 +89,142 @@ export default function HomeClient() {
         <div style={{
           position: 'absolute', bottom: 0, left: 0, right: 0, height: 120, zIndex: 2,
           background: 'linear-gradient(to top, #0d1f35 0%, transparent 100%)',
+          marginTop: 60,
         }} />
 
         {/* Hero content */}
-        <div style={{ position: 'relative', zIndex: 10, textAlign: 'center', color: 'white', maxWidth: 1000, margin: '0 auto', padding: '0 20px' }}>
+        <div style={{ position: 'relative', zIndex: 10, textAlign: 'center', color: 'white', maxWidth: 1100, margin: '0 auto', padding: '0 20px', marginTop: 60 }}>
 
-          {/* Top pill */}
-          <div style={{
-            display: 'inline-flex', alignItems: 'center', gap: 10,
-            background: 'rgba(255,255,255,0.08)',
-            border: '1px solid rgba(240,120,64,0.5)',
-            borderRadius: 999, padding: '9px 24px', marginBottom: 32,
-            fontSize: 12, fontFamily: 'Oswald, sans-serif',
-            letterSpacing: '0.12em', backdropFilter: 'blur(12px)',
-            textTransform: 'uppercase', color: 'rgba(255,255,255,0.92)',
+          {/* Top bold label */}
+          <p style={{
+            fontFamily: 'Oswald, sans-serif',
+            fontSize: 'clamp(2rem, 3.5vw, 1.65rem)',
+            fontWeight: 700,
+            letterSpacing: '0.05em',
+            textTransform: 'uppercase',
+            color: 'rgba(255,255,255,0.88)',
+            marginBottom: 18,
+            textShadow: '0 2px 12px rgba(0,0,0,0.5)',
           }}>
-            <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#F07840', display: 'inline-block', flexShrink: 0, boxShadow: '0 0 8px #F07840' }} />
-            India's Premier Dairy &amp; Food Industry Expo · 13th Edition
-          </div>
+            13th Biggest Dairy Industry Exhibition
+          </p>
 
           {/* Main heading */}
           <h1 style={{
-            fontFamily: '"Playfair Display", serif',
-            fontSize: 'clamp(2.8rem, 7.5vw, 5.6rem)',
-            fontWeight: 900, lineHeight: 1.08, marginBottom: 0,
-            textShadow: '0 4px 32px rgba(0,0,0,0.5)',
+            fontFamily: 'Oswald, sans-serif',
+            fontSize: 'clamp(1.5rem, 3.5vw, 3.5rem)',
+            fontWeight: 600,
+            lineHeight: 1.0,
+            marginBottom: 15,
+            marginTop: 25,
+            textTransform: 'uppercase',
+            letterSpacing: '0.04em',
+            textShadow: '0 4px 32px rgba(0,0,0,0.6)',
           }}>
-            <span style={{ color: '#F07840', display: 'block' }}>Godwa Dairy</span>
-            <span style={{ color: '#ffffff', display: 'block' }}>Expo 2026.</span>
+            <span style={{ color: '#380492' }}>Godwa</span>{' '}
+            <span style={{ color: '#ffffff' }}>Dairy Expo</span>
           </h1>
 
-          {/* Accent line */}
-          <div style={{ width: 72, height: 3, background: 'linear-gradient(90deg, #F07840, #ffd27a)', borderRadius: 99, margin: '20px auto 28px' }} />
-
-          {/* Date · Venue · Time bar */}
+          {/* Year */}
           <div style={{
-            display: 'inline-flex', alignItems: 'stretch', gap: 0,
-            background: 'rgba(0,0,0,0.45)',
-            border: '1.5px solid rgba(240,120,64,0.5)',
-            borderRadius: 16, marginBottom: 32,
-            backdropFilter: 'blur(14px)', overflow: 'hidden',
+            fontFamily: 'Oswald, sans-serif',
+            fontSize: 'clamp(2rem, 5vw, 3.5rem)',
+            fontWeight: 700,
+            color: '#ffffff',
+            letterSpacing: '0.1em',
+            marginBottom: 34,
+            textShadow: '0 2px 16px rgba(0,0,0,0.5)',
           }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '14px 26px', borderRight: '1px solid rgba(255,255,255,0.12)' }}>
-              <Calendar size={18} style={{ color: '#F07840', flexShrink: 0 }} />
-              <div style={{ textAlign: 'left' }}>
-                <div style={{ fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 17, letterSpacing: '0.05em', color: '#fff', lineHeight: 1.2 }}>5 – 6 – 7</div>
-                <div style={{ fontFamily: 'Oswald, sans-serif', fontWeight: 400, fontSize: 11, color: 'rgba(255,255,255,0.6)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>December 2026</div>
-              </div>
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '14px 26px', borderRight: '1px solid rgba(255,255,255,0.12)' }}>
-              <MapPin size={18} style={{ color: '#F07840', flexShrink: 0 }} />
-              <div style={{ textAlign: 'left' }}>
-                <div style={{ fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 17, letterSpacing: '0.05em', color: '#fff', lineHeight: 1.2 }}>Pune</div>
-                <div style={{ fontFamily: 'Oswald, sans-serif', fontWeight: 400, fontSize: 11, color: 'rgba(255,255,255,0.6)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Maharashtra</div>
-              </div>
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '14px 26px' }}>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F07840" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
-              <div style={{ textAlign: 'left' }}>
-                <div style={{ fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 17, letterSpacing: '0.05em', color: '#fff', lineHeight: 1.2 }}>10 AM – 6 PM</div>
-                <div style={{ fontFamily: 'Oswald, sans-serif', fontWeight: 400, fontSize: 11, color: 'rgba(255,255,255,0.6)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Daily</div>
-              </div>
-            </div>
+            5 – 6 – 7 DECEMBER 2026
           </div>
 
-          {/* Sub-description */}
-          <p style={{ color: 'rgba(255,255,255,0.80)', fontSize: 17, maxWidth: 560, margin: '0 auto 38px', lineHeight: 1.8, textShadow: '0 2px 12px rgba(0,0,0,0.5)' }}>
-            India's 13th biggest platform for Dairy, Bakery, Food Processing &amp;Feedtech machinery Connect with <strong style={{ color: '#ffd27a' }}>15,000+ professionals</strong> and <strong style={{ color: '#ffd27a' }}>150+ leading exhibitors</strong>.
+          {/* Venue */}
+          <p style={{
+            fontFamily: 'Oswald, sans-serif',
+            fontSize: 'clamp(1.8rem, 3.5vw, 2.25rem)',
+            fontWeight: 500,
+            letterSpacing: '0.05em',
+            textTransform: 'uppercase',
+            color: 'rgba(255,255,255,0.82)',
+            marginBottom: 58,
+            textShadow: '0 2px 10px rgba(0,0,0,0.5)',
+          }}>
+            Mahalaxmi Lawns, Karvenagar, Pune – 411052
           </p>
 
-          {/* CTA buttons */}
-          <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a
-              href="https://forms.gle/XbNZWHxgzrxKC4YW8"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-gold"
-              style={{ padding: '16px 40px', borderRadius: 999, fontSize: 15, gap: 8, boxShadow: '0 8px 36px rgba(240,120,64,0.55)', textDecoration: 'none', fontWeight: 700 }}
-            >
-              Book Your Space Now <ArrowRight size={17} />
-            </a>
-            <Link
-              href="/visitors"
-              style={{ background: 'rgba(255,255,255,0.12)', border: '2px solid rgba(255,255,255,0.4)', color: 'white', padding: '16px 40px', borderRadius: 999, fontSize: 15, fontFamily: 'Oswald, sans-serif', fontWeight: 700, letterSpacing: '0.05em', display: 'inline-flex', alignItems: 'center', gap: 8, transition: 'all 0.3s', textDecoration: 'none', backdropFilter: 'blur(8px)' }}
-            >
-              Visitor Registration <ChevronRight size={17} />
-            </Link>
+          {/* Three-column CTA — matches reference design */}
+          <div style={{ display: 'flex', gap: 20, justifyContent: 'center', flexWrap: 'wrap' }}>
+
+            {/* Exhibitor */}
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10, minWidth: 200 }}>
+              <span style={{ fontFamily: 'Oswald, sans-serif', fontSize: 17, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.9)' }}>
+                Exhibitor
+              </span>
+              <a
+                href="https://forms.gle/m1o3G6CDSA3q1Jwv7"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'block', width: '100%', textAlign: 'center',
+                  background: '#F07840', color: '#fff',
+                  padding: '15px 32px', borderRadius: 999,
+                  fontFamily: 'Oswald, sans-serif', fontWeight: 700,
+                  fontSize: 15, letterSpacing: '0.12em', textTransform: 'uppercase',
+                  textDecoration: 'none',
+                  boxShadow: '0 6px 28px rgba(240,120,64,0.55)',
+                  transition: 'background 0.2s, transform 0.2s',
+                }}
+              >
+                Book Your Space
+              </a>
+            </div>
+
+            {/* Visitor */}
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10, minWidth: 200 }}>
+              <span style={{ fontFamily: 'Oswald, sans-serif', fontSize: 17, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.9)' }}>
+                Visitor
+              </span>
+              <a
+                href="https://forms.gle/XbNZWHxgzrxKC4YW8"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'block', width: '100%', textAlign: 'center',
+                  background: '#F07840', color: '#fff',
+                  padding: '15px 32px', borderRadius: 999,
+                  fontFamily: 'Oswald, sans-serif', fontWeight: 700,
+                  fontSize: 15, letterSpacing: '0.12em', textTransform: 'uppercase',
+                  textDecoration: 'none',
+                  boxShadow: '0 6px 28px rgba(240,120,64,0.55)',
+                  transition: 'background 0.2s, transform 0.2s',
+                }}
+              >
+                Register Here
+              </a>
+            </div>
+
+            {/* Seminar */}
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10, minWidth: 200 }}>
+              <span style={{ fontFamily: 'Oswald, sans-serif', fontSize: 17, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.9)' }}>
+                Seminar
+              </span>
+              <Link
+                href="/contact"
+                style={{
+                  display: 'block', width: '100%', textAlign: 'center',
+                  background: '#F07840', color: '#fff',
+                  padding: '15px 32px', borderRadius: 999,
+                  fontFamily: 'Oswald, sans-serif', fontWeight: 700,
+                  fontSize: 15, letterSpacing: '0.12em', textTransform: 'uppercase',
+                  textDecoration: 'none',
+                  boxShadow: '0 6px 28px rgba(240,120,64,0.55)',
+                  transition: 'background 0.2s, transform 0.2s',
+                }}
+              >
+                Click Here
+              </Link>
+            </div>
+
           </div>
         </div>
 
@@ -279,24 +329,6 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* ── 2025 HIGHLIGHTS VIDEO ── */}
-      <section style={{ padding: '80px 0', background: '#FFFFFF' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 16px', textAlign: 'center' }}>
-          <span style={{ color: '#E8702E', fontFamily: 'Oswald, sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', fontSize: 13 }}>Previous Edition</span>
-          <h2 className="section-title" style={{ fontFamily: '"Playfair Display", serif', fontSize: 36, fontWeight: 700, color: '#2D6A4F', margin: '8px 0 32px' }}>Godwa Expo 2025 Highlights</h2>
-          <div style={{ borderRadius: 20, overflow: 'hidden', boxShadow: '0 20px 60px rgba(0,0,0,0.15)', aspectRatio: '16/9', background: '#1A3A5C' }}>
-            <iframe
-              src="https://www.youtube.com/embed/DRadPtfjRBs"
-              title="Godwa Expo 2025 Highlights"
-              style={{ width: '100%', height: '100%', border: 'none' }}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
-          <p style={{ color: '#999', fontSize: 12, marginTop: 12 }}>Replace the YouTube URL in the code with your actual 2025 highlight video link.</p>
-        </div>
-      </section>
-
       {/* ── VENUE ── */}
       <section style={{ padding: '96px 0', background: 'linear-gradient(160deg, #F5FAF7 0%, #EAF4EE 100%)' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px' }}>
@@ -307,11 +339,12 @@ export default function HomeClient() {
             <h2 style={{ fontFamily: 'Oswald, sans-serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 700, color: '#2D6A4F', margin: '10px 0 0', letterSpacing: '0.06em', textTransform: 'uppercase' }}>Venue &amp; Dates</h2>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(380px, 1fr))', gap: 52, alignItems: 'center' }}>
+          {/* Info cards + Map */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: 40, alignItems: 'center', marginBottom: 52 }}>
             <div>
               {[
                 { icon: '📅', title: 'Event Dates', val: '5, 6 & 7 December 2026', sub: '10:00 AM – 6:00 PM Daily' },
-                { icon: '📍', title: 'Venue', val: 'Pune, Maharashtra', sub: "India's Industrial Capital" },
+                { icon: '📍', title: 'Venue', val: 'Mahalaxmi Lawns, Karvenagar', sub: 'Pune – 411052, Maharashtra' },
               ].map((item) => (
                 <div key={item.title} style={{ display: 'flex', gap: 20, alignItems: 'flex-start', background: 'white', borderRadius: 20, padding: '24px 28px', marginBottom: 20, boxShadow: '0 4px 24px rgba(45,106,79,0.10)', border: '1.5px solid #D9EDE2' }}>
                   <div style={{ fontSize: 36, lineHeight: 1, flexShrink: 0, marginTop: 2 }}>{item.icon}</div>
@@ -323,8 +356,8 @@ export default function HomeClient() {
                 </div>
               ))}
               <div style={{ display: 'flex', gap: 12, marginTop: 12, flexWrap: 'wrap' }}>
-                <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ padding: '14px 28px', borderRadius: 999, fontSize: 15, gap: 8, textDecoration: 'none' }}>
-                  Register as Exhibitor <ArrowRight size={15} />
+                <a href="https://forms.gle/m1o3G6CDSA3q1Jwv7" target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ padding: '14px 28px', borderRadius: 999, fontSize: 15, gap: 8, textDecoration: 'none' }}>
+                  Book Your Space <ArrowRight size={15} />
                 </a>
                 <Link href="/contact" className="btn-blue" style={{ padding: '14px 28px', borderRadius: 999, fontSize: 15, textDecoration: 'none' }}>
                   Get Directions
@@ -343,6 +376,49 @@ export default function HomeClient() {
                 title="Venue Map"
               />
             </div>
+          </div>
+
+          {/* ── FLOOR PLAN ── */}
+          <div style={{ textAlign: 'center', marginBottom: 28 }}>
+            <span style={{ color: '#E8702E', fontFamily: 'Oswald, sans-serif', letterSpacing: '0.15em', textTransform: 'uppercase', fontSize: 13, fontWeight: 600 }}>Exhibition Layout</span>
+            <h3 style={{ fontFamily: 'Oswald, sans-serif', fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 700, color: '#2D6A4F', margin: '8px 0 0', letterSpacing: '0.05em', textTransform: 'uppercase' }}>Floor Plan 2026</h3>
+          </div>
+          <div style={{ background: 'white', borderRadius: 24, overflow: 'hidden', boxShadow: '0 8px 40px rgba(45,106,79,0.12)', border: '1.5px solid #D9EDE2' }}>
+            <iframe
+              src="/godwa-layout-2026.pdf"
+              width="100%"
+              height="620"
+              style={{ border: 'none', display: 'block' }}
+              title="Godwa Expo 2026 Floor Plan"
+            />
+          </div>
+          <div style={{ textAlign: 'center', marginTop: 20 }}>
+            <a
+              href="/godwa-layout-2026.pdf"
+              download="Godwa-Layout-2026.pdf"
+              className="btn-gold"
+              style={{ padding: '12px 32px', borderRadius: 999, fontSize: 14, gap: 8, textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}
+            >
+              Download Layout PDF <ArrowRight size={15} />
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ── 2025 HIGHLIGHTS VIDEO ── */}
+      <section style={{ padding: '80px 0', background: '#FFFFFF' }}>
+        <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 16px', textAlign: 'center' }}>
+          <span style={{ color: '#E8702E', fontFamily: 'Oswald, sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', fontSize: 13 }}>Previous Edition</span>
+          <h2 className="section-title" style={{ fontFamily: 'Oswald, sans-serif', fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 700, color: '#2D6A4F', margin: '8px 0 32px', letterSpacing: '0.05em', textTransform: 'uppercase' }}>Godwa Expo 2025 Highlights</h2>
+          <div style={{ borderRadius: 20, overflow: 'hidden', boxShadow: '0 20px 60px rgba(0,0,0,0.15)', aspectRatio: '16/9', background: '#1A3A5C' }}>
+            <iframe
+              src="https://www.youtube.com/embed/DRadPtfjRBs"
+              title="Godwa Expo 2025 Highlights"
+              style={{ width: '100%', height: '100%', border: 'none' }}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
           </div>
         </div>
       </section>

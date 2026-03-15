@@ -127,3 +127,10 @@ body {
 .industry-scroll-track:hover {
   animation-play-state: paused;
 }
+.social-icon-btn {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.social-icon-btn:hover {
+  transform: scale(1.12);
+  opacity: 0.88;
+}

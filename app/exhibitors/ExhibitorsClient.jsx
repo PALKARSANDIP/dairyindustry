@@ -110,7 +110,7 @@ export default function ExhibitorsClient() {
           {/* Facilities Table */}
           <div style={{ background: 'white', borderRadius: 18, overflow: 'hidden', boxShadow: '0 4px 18px rgba(0,0,0,0.07)', border: '1px solid #e8eef5' }}>
             <div style={{ background: '#2D6A4F', padding: '14px 24px' }}>
-              <h3 style={{ fontFamily: 'Oswald, sans-serif', fontSize: 16, fontWeight: 700, color: 'white', letterSpacing: '0.05em', margin: 0, textTransform: 'uppercase' }}>Facilities Godwa Team Provides</h3>
+              <h3 style={{ fontFamily: 'Oswald, sans-serif', fontSize: 16, fontWeight: 700, color: 'white', letterSpacing: '0.05em', margin: 0, textTransform: 'uppercase' }}>Facilities Provided by Godwa Team</h3>
             </div>
             <table style={{ width: '100%', borderCollapse: 'collapse' }}>
               <thead>
