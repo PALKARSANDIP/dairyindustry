@@ -1,9 +1,12 @@
 import { ExternalLink } from 'lucide-react'
+import { buildMetadata } from '@/lib/seo'
 
-export const metadata = {
-  title: 'Visitor Registration | Godwa Dairy Expo 2026',
+export const metadata = buildMetadata({
+  title: 'Visitor Registration',
   description: 'Register as a free visitor for Godwa Dairy Expo 2026, Pune. Free entry for all dairy industry professionals.',
-}
+  path: '/visitors/registration',
+  noIndex: true, // "Coming Soon" page — exclude from Google until content is ready
+})
 
 export default function VisitorRegistrationPage() {
   return (

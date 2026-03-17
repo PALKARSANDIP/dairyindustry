@@ -29,7 +29,7 @@ export default function Footer() {
             </div>
           </div>
           <p style={{ color: 'rgba(255,255,255,0.65)' }} className="text-sm leading-relaxed mb-4">
-            India's 13th Premier Dairy, Bakery, Food Processing & Feed Tech Industry Exhibition. Pune, 5-7 Dec 2026.
+            India's 13th Biggest Dairy ,Bakery,Feed and Food processing Machinery industry Exhibition 2026.
           </p>
           {/* Social media icons */}
           <div style={{ display: 'flex', gap: 10 }}>

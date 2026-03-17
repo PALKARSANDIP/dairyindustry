@@ -85,7 +85,7 @@ export default function ExhibitorsProfilePage() {
           13<sup style={{ fontSize: '0.65em' }}>th</sup> Biggest Platform for showcasing the complete Dairy, Bakery, Feed and Food Processing Solutions
         </p>
         <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <a href="https://forms.gle/m1o3G6CDSA3q1Jwv7" target="_blank" rel="noopener noreferrer"
+          <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer"
             style={{ background: '#F5C842', color: '#1A3A5C', padding: '13px 28px', borderRadius: 999, fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 16, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
             Exhibitor Registration <ExternalLink size={16} />
           </a>
@@ -140,7 +140,7 @@ export default function ExhibitorsProfilePage() {
             Book your exhibition space and showcase your products to 15,000+ industry professionals — 5–7 December 2026, Pune.
           </p>
           <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="https://forms.gle/m1o3G6CDSA3q1Jwv7" target="_blank" rel="noopener noreferrer"
+            <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer"
               style={{ background: '#F5C842', color: '#1A3A5C', padding: '16px 40px', borderRadius: 999, fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 18, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 10, boxShadow: '0 6px 24px rgba(245,200,66,0.3)' }}>
               Book Your Space <ExternalLink size={18} />
             </a>

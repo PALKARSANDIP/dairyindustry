@@ -1,6 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'standalone',
+  async redirects() {
+    return [
+      // Old indexed URLs → redirect to correct pages (301 = permanent, tells Google to update)
+      {
+        source: '/visitor-profile-dairy-industry-in-expo-pune',
+        destination: '/visitors',
+        permanent: true,
+      },
+    ]
+  },
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'images.unsplash.com' },

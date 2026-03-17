@@ -23,7 +23,7 @@ const navLinks = [
     sub: [
       { label: 'Why Exhibit?', href: '/exhibitors/why-exhibit' },
       { label: 'Exhibitors Profile', href: '/exhibitors/profile' },
-      { label: 'Exhibitors Registration', href: 'https://forms.gle/m1o3G6CDSA3q1Jwv7', external: true },
+      { label: 'Exhibitors Registration', href: 'https://forms.gle/XbNZWHxgzrxKC4YW8', external: true },
       { label: 'Downloads', href: '/downloads' },
     ],
   },
