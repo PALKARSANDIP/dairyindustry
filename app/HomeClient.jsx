@@ -26,6 +26,9 @@ const galleryPreviews = [
   '/Images/2025/6Y9A0142.JPG',
   '/Images/2025/6Y9A0244.JPG',
   '/Images/2025/6Y9A0251.JPG',
+  '/Images/2025/6Y9A0097.JPG',
+  '/Images/2025/6Y9A0275.JPG',
+  
 ]
 
 export default function HomeClient() {
@@ -75,7 +78,7 @@ export default function HomeClient() {
       `}</style>
 
       {/* ── HERO ── */}
-      <section style={{ position: 'relative', height: '100vh', minHeight: 680, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', background: 'linear-gradient(180deg, #0d47a1 0%, #1565c0 20%, #1976d2 45%, #42a5f5 75%, #90caf9 100%)', backgroundSize: '200% 200%', animation: 'bgShift 12s ease infinite' }}>
+      <section style={{ position: 'relative', height: '100vh', minHeight: 680, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', background: 'linear-gradient(180deg, #1a3a5c 0%, #1a3a5c 20%, #1a3a5c 45%, #225082 75%, #1a3a5c 100%)', backgroundSize: '200% 200%', animation: 'bgShift 12s ease infinite' }}>
 
         {/* Orange top accent line */}
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3, background: 'linear-gradient(90deg, #e65100, #F07840, #ffcc02, #F07840, #e65100)', zIndex: 20, animation: 'accentLine 4s ease-in-out infinite' }} />
@@ -110,17 +113,17 @@ export default function HomeClient() {
           </div> */}
 
           {/* Badge */}
-          <h1 className="hero-fadeup-1" style={{ fontFamily: 'Oswald, sans-serif', fontSize: 'clamp(2.1rem, 2.8vw, 1.6rem)', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#ffd0a0', marginBottom: 18, marginTop: 25, textShadow: '0 2px 12px rgba(0,0,0,0.5)' }}>
+          <h1 className="hero-fadeup-1" style={{ fontFamily: 'Oswald, sans-serif', fontSize: 'clamp(1.9rem, 3.8vw, 2.9rem)', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#ffd0a0', marginBottom: 18, marginTop: 80, textShadow: '0 2px 12px rgba(0,0,0,0.5)' }}>
             13th Biggest Dairy Industry Exhibition
           </h1>
 
           {/* Main title */}
-          <h3 className="hero-fadeup-2" style={{ fontFamily: 'Oswald, sans-serif', fontSize: 'clamp(1.8rem, 6vw, 4.5rem)', fontWeight: 700, lineHeight: 0.95, margin: '0 0 10px', textTransform: 'uppercase', letterSpacing: '0.05em', color: '#ffffff', textShadow: '0 4px 40px rgba(0,0,0,0.8)' }}>
+          <h4 className="hero-fadeup-2" style={{ fontFamily: 'Oswald, sans-serif', fontSize: 'clamp(1.2rem, 4vw, 3.5rem)', fontWeight: 700, lineHeight: 0.95, margin: '0 0 10px', textTransform: 'uppercase', letterSpacing: '0.05em', color: '#ffffff', textShadow: '0 4px 40px rgba(0,0,0,0.8)' }}>
             Godwa Dairy Expo
-          </h3>
+          </h4>
 
           {/* Year — highlight */}
-          <div className="hero-fadeup-2" style={{ fontFamily: 'Oswald, sans-serif', fontSize: 'clamp(2rem, 5.5vw, 4rem)', fontWeight: 700, color: '#F07840', letterSpacing: '0.12em', marginBottom: 14, textShadow: '0 2px 20px rgba(240,120,64,0.6)' }}>
+          <div className="hero-fadeup-2" style={{ fontFamily: 'Oswald, sans-serif', fontSize: 'clamp(2rem, 4.55vw, 3rem)', fontWeight: 700, color: '#F07840', letterSpacing: '0.12em', marginBottom: 14, textShadow: '0 2px 20px rgba(240,120,64,0.6)' }}>
             2026
           </div>
 
@@ -188,7 +191,7 @@ export default function HomeClient() {
       </section> */}
 
       {/* ── CTA BAND ── */}
-      <section style={{ padding: '48px 0', background: 'linear-gradient(135deg, #1a0a00 0%, #2c1200 100%)' }}>
+      <section style={{ padding: '48px 0', background: 'linear-gradient(135deg, #8ca635 0%, #17d7ed 100%)' }}>
 
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 16px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 32, textAlign: 'center', marginBlottom: 40 }}>
           {stats.map(({ value, label, icon: Icon }) => (
@@ -225,7 +228,7 @@ export default function HomeClient() {
           <div style={{ textAlign: 'center', marginBottom: 52 }}>
             <span style={{ color: '#E8702E', fontFamily: 'Oswald, sans-serif', letterSpacing: '0.15em', textTransform: 'uppercase', fontSize: 14, fontWeight: 600 }}>Why Godwa Expo</span>
             <h2 style={{ fontFamily: 'Oswald, sans-serif', fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 700, color: '#1a0a00', marginTop: 10, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Why Choose Us?</h2>
-            <p style={{ color: '#555', maxWidth: 620, margin: '18px auto 0', fontSize: 17, lineHeight: 1.75, fontFamily: 'Oswald, sans-serif', fontWeight: 400 }}>
+            <p style={{ color: '#555', maxWidth: 620, margin: '18px auto 0', fontSize: 22, lineHeight: 1.75, fontFamily: 'Oswald, sans-serif', fontWeight: 400 }}>
               Godwa Dairy Expo is the biggest platform for dairy, bakery and allied industries, connecting exhibitors with targeted audiences.
             </p>
           </div>
@@ -234,7 +237,7 @@ export default function HomeClient() {
               <div key={item.title} className="card-hover" style={{ background: 'white', borderRadius: 20, padding: 32, boxShadow: '0 4px 20px rgba(240,120,64,0.10)', border: '1px solid #FFE8DA' }}>
                 <div style={{ fontSize: 42, marginBottom: 14 }}>{item.icon}</div>
                 <h3 style={{ fontFamily: 'Oswald, sans-serif', fontSize: 20, fontWeight: 700, color: '#c0562a', marginBottom: 10, letterSpacing: '0.04em', textTransform: 'uppercase' }}>{item.title}</h3>
-                <p style={{ color: '#666', fontSize: 15, lineHeight: 1.75, fontFamily: 'Oswald, sans-serif', fontWeight: 400 }}>{item.desc}</p>
+                <p style={{ color: '#666', fontSize: 19, lineHeight: 1.75, fontFamily: 'Oswald, sans-serif', fontWeight: 400 }}>{item.desc}</p>
               </div>
             ))}
           </div>

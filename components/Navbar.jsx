@@ -88,7 +88,7 @@ export default function Navbar() {
                 width: '98%',
                 height: '100%',
                 borderRadius: '50%',
-                background: '#fff',
+                background: '#ffffff',
                 overflow: 'hidden',
                 position: 'relative',
                 paddingLeft: 6,
@@ -190,11 +190,11 @@ export default function Navbar() {
             >
               <Link
                 href={link.href}
-                className="flex items-center gap-1 px-3 py-2 text-sm font-semibold rounded-md transition-all duration-200"
+                className="flex items-center gap-1 px-3 py-2 text-lg font-semibold rounded-md transition-all duration-200"
                 style={{ color: '#374151', fontFamily: 'Nunito, sans-serif' }}
                 onMouseEnter={e => {
                   e.currentTarget.style.color = '#E8702E'
-                  e.currentTarget.style.backgroundColor = '#FFF4EE'
+                  e.currentTarget.style.backgroundColor = '#52dfd1'
                 }}
                 onMouseLeave={e => {
                   e.currentTarget.style.color = '#374151'
@@ -214,7 +214,7 @@ export default function Navbar() {
                         href={s.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="block px-4 py-2.5 text-sm font-semibold transition-colors hover:bg-orange-50"
+                        className="block px-4 py-2.5 text-lg font-semibold transition-colors hover:bg-orange-50"
                         style={{ color: '#1A3A5C', fontFamily: 'Nunito, sans-serif' }}
                       >
                         {s.label}
@@ -223,7 +223,7 @@ export default function Navbar() {
                       <Link
                         key={s.label}
                         href={s.href}
-                        className="block px-4 py-2.5 text-sm font-semibold transition-colors hover:bg-orange-50"
+                        className="block px-4 py-2.5 text-lg font-semibold transition-colors hover:bg-orange-50"
                         style={{ color: '#1A3A5C', fontFamily: 'Nunito, sans-serif' }}
                       >
                         {s.label}

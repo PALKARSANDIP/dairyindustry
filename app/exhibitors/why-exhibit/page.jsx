@@ -93,27 +93,15 @@ export default function WhyExhibitPage() {
             <h2 style={{ fontFamily: '"Playfair Display", serif', fontSize: 'clamp(26px,4vw,40px)', fontWeight: 700, color: '#1A3A5C', marginTop: 10 }}>Why to Exhibit</h2>
           </div>
 
-          {/* Two-column: list + image */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1.1fr) minmax(0,0.9fr)', gap: 48, alignItems: 'center' }} className="why-exhibit-grid">
-            {/* Reasons list */}
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 14 }}>
-              {reasons.map((r, i) => (
-                <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 12, background: 'white', borderRadius: 14, padding: '14px 18px', boxShadow: '0 2px 12px rgba(0,0,0,0.05)', border: '1px solid #F0E8D8' }}>
-                  <CheckCircle size={18} style={{ color: '#2E7D32', flexShrink: 0, marginTop: 2 }} />
-                  <span style={{ color: '#444', fontSize: 16, lineHeight: 1.65 }}>{r}</span>
-                </li>
-              ))}
-            </ul>
-
-            {/* Image */}
-            <div style={{ borderRadius: 24, overflow: 'hidden', boxShadow: '0 12px 40px rgba(0,0,0,0.15)', position: 'sticky', top: 110 }}>
-              <img
-                src="/Images/why-exhibit-expo.png"
-                alt="Godwa Dairy Expo Exhibition Floor"
-                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', minHeight: 340 }}
-              />
-            </div>
-          </div>
+          {/* Two-column card grid */}
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 16 }} className="why-exhibit-grid">
+            {reasons.map((r, i) => (
+              <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 12, background: 'white', borderRadius: 14, padding: '16px 20px', boxShadow: '0 2px 12px rgba(0,0,0,0.05)', border: '1px solid #F0E8D8' }}>
+                <CheckCircle size={18} style={{ color: '#2E7D32', flexShrink: 0, marginTop: 3 }} />
+                <span style={{ color: '#444', fontSize: 16, lineHeight: 1.65 }}>{r}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -140,7 +128,7 @@ export default function WhyExhibitPage() {
       </section>
 
       <style>{`
-        @media (max-width: 700px) {
+        @media (max-width: 640px) {
           .why-exhibit-grid {
             grid-template-columns: 1fr !important;
           }
