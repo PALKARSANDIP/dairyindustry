@@ -88,15 +88,27 @@ export default function WhyVisitPage() {
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 16 }}>
-            {['6Y9A0097.JPG', '6Y9A0344.JPG', '6Y9A9884.JPG'].map((filename, i) => (
-              <div key={i} style={{ borderRadius: 16, overflow: 'hidden', background: '#E8F0EB', aspectRatio: '4/3', position: 'relative' }}>
-                <img
-                  src={`/Images/${filename}`}
-                  alt={`Godwa Dairy Expo 2025 - Photo ${i + 1}`}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-                />
-              </div>
-            ))}
+            <div style={{ borderRadius: 16, overflow: 'hidden', background: '#E8F0EB', aspectRatio: '4/3' }}>
+              <img
+                src="/Images/6Y9A0097.JPG"
+                alt="Godwa Dairy Expo 2025 - Photo 1"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+              />
+            </div>
+            <div style={{ borderRadius: 16, overflow: 'hidden', background: '#E8F0EB', aspectRatio: '4/3' }}>
+              <img
+                src="/Images/6Y9A0344.JPG"
+                alt="Godwa Dairy Expo 2025 - Photo 2"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+              />
+            </div>
+            <div style={{ borderRadius: 16, overflow: 'hidden', background: '#E8F0EB', aspectRatio: '4/3' }}>
+              <img
+                src="/Images/6Y9A9884.JPG"
+                alt="Godwa Dairy Expo 2025 - Photo 3"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+              />
+            </div>
           </div>
         </div>
       </section>
