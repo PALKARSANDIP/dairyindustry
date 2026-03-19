@@ -29,8 +29,8 @@ export default function ContactPage() {
             <h2 style={{ fontFamily: '"Playfair Display", serif', fontSize: 34, fontWeight: 700, color: '#1A3A5C', marginBottom: 28 }}>Get In Touch</h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
               {[
-                { icon: Clock, color: '#4CAF50', title: 'Event Timing', content: <><div style={{ fontWeight: 700, color: '#1A3A5C' }}>5, 6 & 7 December 2026</div><div style={{ color: '#666' }}>10:00 AM - 6:00 PM Daily</div></> },
-                { icon: MapPin, color: '#1A3A5C', title: 'Venue Address', content: <span>Mahalaxmi Lawns<br />100 FT, DP Rd, near Rajaram Bridge,<br />Sridhar Colony, Karvenagar, Pune 411052</span> },
+                { icon: Clock, color: '#4CAF50', title: 'Event Timing', content: <><div style={{ fontWeight: 800, fontSize: 22, color: '#1A3A5C', lineHeight: 1.2, marginBottom: 4 }}>5, 6 & 7 December 2026</div><div style={{ color: '#666', fontSize: 15 }}>10:00 AM – 6:00 PM Daily</div></> },
+                { icon: MapPin, color: '#1A3A5C', title: 'Venue Address', content: <span style={{ fontWeight: 700, fontSize: 18, color: '#1A3A5C', lineHeight: 1.6 }}>Mahalaxmi Lawns<br /><span style={{ fontWeight: 400, fontSize: 15, color: '#555' }}>100 FT, DP Rd, near Rajaram Bridge,<br />Sridhar Colony, Karvenagar, Pune 411052</span></span> },
                 { icon: Mail, color: '#D4A017', title: 'Email', content: <a href="mailto:dairyexpo@gmail.com" style={{ color: '#0D7377', fontWeight: 700, textDecoration: 'none' }}>dairyexpo@gmail.com</a> },
 
               ].map(({ icon: Icon, color, title, content }) => (
@@ -39,8 +39,8 @@ export default function ContactPage() {
                     <Icon size={22} style={{ color }} />
                   </div>
                   <div>
-                    <div style={{ fontFamily: 'Oswald, sans-serif', fontWeight: 700, textTransform: 'uppercase', fontSize: 12, letterSpacing: '0.08em', color: '#999', marginBottom: 5 }}>{title}</div>
-                    <div style={{ fontSize: 16, lineHeight: 1.75, color: '#555' }}>{content}</div>
+                    <div style={{ fontWeight: 700, textTransform: 'uppercase', fontSize: 11, letterSpacing: '0.1em', color: '#aaa', marginBottom: 8 }}>{title}</div>
+                    <div style={{ fontSize: 16, lineHeight: 1.7, color: '#555' }}>{content}</div>
                   </div>
                 </div>
               ))}

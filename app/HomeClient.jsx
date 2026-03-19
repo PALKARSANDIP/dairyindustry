@@ -36,143 +36,267 @@ export default function HomeClient() {
   return (
     <div style={{ overflowX: 'hidden' }}>
 
-      {/* ── HERO ANIMATIONS ── */}
+      {/* ── HERO STYLES ── */}
       <style>{`
         @keyframes fadeUp {
-          from { opacity: 0; transform: translateY(28px); }
+          from { opacity: 0; transform: translateY(24px); }
           to   { opacity: 1; transform: translateY(0); }
         }
         @keyframes glowPulse {
-          0%, 100% { transform: translateX(-50%) scale(1);   opacity: 0.28; }
-          50%       { transform: translateX(-50%) scale(1.18); opacity: 0.42; }
+          0%, 100% { transform: translateX(-50%) scale(1);    opacity: 0.25; }
+          50%       { transform: translateX(-50%) scale(1.15); opacity: 0.38; }
         }
         @keyframes floatOrb1 {
-          0%, 100% { transform: translate(0px, 0px)   scale(1);    opacity: 0.14; }
-          33%       { transform: translate(30px, -20px) scale(1.1);  opacity: 0.22; }
-          66%       { transform: translate(-20px, 15px) scale(0.95); opacity: 0.16; }
+          0%, 100% { transform: translate(0,0) scale(1);      opacity: 0.13; }
+          50%       { transform: translate(24px,-18px) scale(1.08); opacity: 0.20; }
         }
         @keyframes floatOrb2 {
-          0%, 100% { transform: translate(0px, 0px)   scale(1);   opacity: 0.18; }
-          40%       { transform: translate(-25px, 20px) scale(1.12); opacity: 0.26; }
-          70%       { transform: translate(15px, -15px) scale(0.9);  opacity: 0.14; }
-        }
-        @keyframes bgShift {
-          0%, 100% { background-position: 0% 50%;   }
-          50%       { background-position: 100% 50%; }
+          0%, 100% { transform: translate(0,0) scale(1);      opacity: 0.16; }
+          50%       { transform: translate(-20px,16px) scale(1.1); opacity: 0.22; }
         }
         @keyframes dotDrift {
-          0%   { background-position: 0px 0px;    }
-          100% { background-position: 36px 36px;  }
+          0%   { background-position: 0 0; }
+          100% { background-position: 40px 40px; }
         }
         @keyframes accentLine {
           0%, 100% { opacity: 1; }
-          50%       { opacity: 0.55; }
+          50%       { opacity: 0.6; }
         }
-        .hero-fadeup   { animation: fadeUp 0.9s ease both; }
-        .hero-fadeup-1 { animation: fadeUp 0.9s 0.1s  ease both; }
-        .hero-fadeup-2 { animation: fadeUp 0.9s 0.25s ease both; }
-        .hero-fadeup-3 { animation: fadeUp 0.9s 0.4s  ease both; }
-        .hero-fadeup-4 { animation: fadeUp 0.9s 0.55s ease both; }
-        .cta-card:hover { transform: translateY(-4px) !important; box-shadow: 0 16px 40px rgba(240,120,64,0.55) !important; }
-        .cta-card { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+        .h-fadeup-1 { animation: fadeUp 0.8s 0.05s ease both; }
+        .h-fadeup-2 { animation: fadeUp 0.8s 0.18s ease both; }
+        .h-fadeup-3 { animation: fadeUp 0.8s 0.30s ease both; }
+        .h-fadeup-4 { animation: fadeUp 0.8s 0.44s ease both; }
+        .h-fadeup-5 { animation: fadeUp 0.8s 0.56s ease both; }
+
+        /* hero section */
+        .hero-sec {
+          position: relative;
+          min-height: 100svh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          background: linear-gradient(160deg, #0c1f33 0%, #1a3a5c 45%, #1e4a70 100%);
+          padding: 100px 20px 52px;
+          text-align: center;
+          box-sizing: border-box;
+        }
+
+        /* main statement — biggest text */
+        .h-main-statement {
+          font-size: clamp(1.1rem, 3.8vw, 2.6rem);
+          font-weight: 800;
+          color: #ffffff;
+          line-height: 1.1;
+          white-space: nowrap;
+          margin: 0 0 18px;
+          letter-spacing: 0.01em;
+          text-shadow: 0 2px 20px rgba(0,0,0,0.45);
+        }
+        @media (max-width: 480px) {
+          .h-main-statement { white-space: normal; }
+        }
+
+        /* sub title */
+        .h-title {
+          font-size: clamp(1rem, 3.5vw, 2rem);
+          font-weight: 600;
+          color: rgba(255,255,255,0.55);
+          line-height: 1.2;
+          margin: 0 0 4px;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+        }
+
+        /* year */
+        .h-year {
+          font-size: clamp(1.5rem, 5vw, 2.8rem);
+          font-weight: 700;
+          color: #F07840;
+          letter-spacing: 0.1em;
+          margin: 0 0 20px;
+        }
+
+        /* divider */
+        .h-divider {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          margin: 0 0 20px;
+        }
+
+        /* date */
+        .h-date {
+          font-size: clamp(1.2rem, 4vw, 2rem);
+          font-weight: 700;
+          color: rgba(255,255,255,0.95);
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          margin: 0 0 18px;
+        }
+
+        /* venue */
+        .h-venue {
+          font-size: clamp(1rem, 3vw, 1.4rem);
+          color: rgba(255,255,255,0.65);
+          letter-spacing: 0.04em;
+          margin: 0 0 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 6px;
+          flex-wrap: wrap;
+        }
+
+        /* cta row */
+        .h-cta-row {
+          display: flex;
+          gap: 12px;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+        .h-cta-primary {
+          background: #F07840;
+          color: #fff;
+          border-radius: 10px;
+          padding: 13px 26px;
+          text-decoration: none;
+          font-weight: 700;
+          font-size: 0.85rem;
+          letter-spacing: 0.07em;
+          text-transform: uppercase;
+          box-shadow: 0 6px 24px rgba(240,120,64,0.45);
+          transition: transform 0.22s ease, box-shadow 0.22s ease;
+          display: inline-block;
+        }
+        .h-cta-primary:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 12px 32px rgba(240,120,64,0.6);
+        }
+        .h-cta-secondary {
+          background: rgba(255,255,255,0.07);
+          border: 1.5px solid rgba(255,255,255,0.3);
+          color: #fff;
+          border-radius: 10px;
+          padding: 13px 26px;
+          text-decoration: none;
+          font-weight: 700;
+          font-size: 0.85rem;
+          letter-spacing: 0.07em;
+          text-transform: uppercase;
+          backdrop-filter: blur(10px);
+          transition: transform 0.22s ease, background 0.22s ease;
+          display: inline-block;
+        }
+        .h-cta-secondary:hover {
+          transform: translateY(-3px);
+          background: rgba(255,255,255,0.13);
+        }
+        .h-cta-outline {
+          background: rgba(240,120,64,0.1);
+          border: 1.5px solid rgba(240,120,64,0.4);
+          color: #ffb38a;
+          border-radius: 10px;
+          padding: 13px 26px;
+          text-decoration: none;
+          font-weight: 700;
+          font-size: 0.85rem;
+          letter-spacing: 0.07em;
+          text-transform: uppercase;
+          backdrop-filter: blur(10px);
+          transition: transform 0.22s ease, background 0.22s ease;
+          display: inline-block;
+        }
+        .h-cta-outline:hover {
+          transform: translateY(-3px);
+          background: rgba(240,120,64,0.18);
+        }
+
+        /* sub-label inside cta */
+        .h-cta-sub {
+          font-size: 0.62rem;
+          letter-spacing: 0.18em;
+          text-transform: uppercase;
+          opacity: 0.7;
+          display: block;
+          margin-bottom: 3px;
+          font-weight: 500;
+        }
+        .h-cta-main {
+          font-size: 0.88rem;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+        }
       `}</style>
 
       {/* ── HERO ── */}
-      <section style={{ position: 'relative', height: '100vh', minHeight: 680, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', background: 'linear-gradient(180deg, #1a3a5c 0%, #1a3a5c 20%, #1a3a5c 45%, #225082 75%, #1a3a5c 100%)', backgroundSize: '200% 200%', animation: 'bgShift 12s ease infinite' }}>
+      <section className="hero-sec">
 
-        {/* Orange top accent line */}
+        {/* Animated orange top line */}
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3, background: 'linear-gradient(90deg, #e65100, #F07840, #ffcc02, #F07840, #e65100)', zIndex: 20, animation: 'accentLine 4s ease-in-out infinite' }} />
 
-        {/* Sun glow — top center */}
-        <div style={{ position: 'absolute', top: '-8%', left: '50%', width: 600, height: 400, borderRadius: '50%', background: 'radial-gradient(ellipse, rgba(255,255,255,0.18) 0%, transparent 65%)', zIndex: 1, pointerEvents: 'none', transform: 'translateX(-50%)', animation: 'glowPulse 8s ease-in-out infinite' }} />
+        {/* Background orbs */}
+        <div style={{ position: 'absolute', top: '-10%', left: '50%', width: 560, height: 380, borderRadius: '50%', background: 'radial-gradient(ellipse, rgba(255,255,255,0.16) 0%, transparent 65%)', zIndex: 1, pointerEvents: 'none', transform: 'translateX(-50%)', animation: 'glowPulse 8s ease-in-out infinite' }} />
+        <div style={{ position: 'absolute', top: '18%', left: '-8%', width: 440, height: 280, borderRadius: '50%', background: 'radial-gradient(ellipse, rgba(255,255,255,0.12) 0%, transparent 70%)', zIndex: 1, pointerEvents: 'none', animation: 'floatOrb2 12s ease-in-out infinite' }} />
+        <div style={{ position: 'absolute', top: '12%', right: '-6%', width: 380, height: 260, borderRadius: '50%', background: 'radial-gradient(ellipse, rgba(255,255,255,0.10) 0%, transparent 70%)', zIndex: 1, pointerEvents: 'none', animation: 'floatOrb1 10s ease-in-out infinite' }} />
+        <div style={{ position: 'absolute', bottom: '-4%', left: '50%', width: 800, height: 360, borderRadius: '50%', background: 'radial-gradient(ellipse, rgba(240,120,64,0.18) 0%, transparent 65%)', zIndex: 1, pointerEvents: 'none', transform: 'translateX(-50%)' }} />
 
-        {/* Cloud orb — left */}
-        <div style={{ position: 'absolute', top: '20%', left: '-6%', width: 480, height: 300, borderRadius: '50%', background: 'radial-gradient(ellipse, rgba(255,255,255,0.14) 0%, transparent 70%)', zIndex: 1, pointerEvents: 'none', animation: 'floatOrb2 12s ease-in-out infinite' }} />
+        {/* Dot grid */}
+        <div style={{ position: 'absolute', inset: 0, zIndex: 1, opacity: 0.18, backgroundImage: 'radial-gradient(circle, rgba(255,255,255,1) 1.5px, transparent 1.5px)', backgroundSize: '40px 40px', pointerEvents: 'none', animation: 'dotDrift 14s linear infinite' }} />
 
-        {/* Cloud orb — right */}
-        <div style={{ position: 'absolute', top: '15%', right: '-5%', width: 420, height: 280, borderRadius: '50%', background: 'radial-gradient(ellipse, rgba(255,255,255,0.12) 0%, transparent 70%)', zIndex: 1, pointerEvents: 'none', animation: 'floatOrb1 10s ease-in-out infinite' }} />
+        {/* Dark overlay */}
+        <div style={{ position: 'absolute', inset: 0, zIndex: 2, background: 'linear-gradient(180deg, rgba(0,0,0,0.32) 0%, rgba(0,0,0,0.16) 50%, rgba(0,0,0,0.40) 100%)', pointerEvents: 'none' }} />
 
-        {/* Warm sunrise glow — bottom */}
-        <div style={{ position: 'absolute', bottom: '-5%', left: '50%', width: 900, height: 400, borderRadius: '50%', background: 'radial-gradient(ellipse, rgba(240,120,64,0.20) 0%, transparent 65%)', zIndex: 1, pointerEvents: 'none', transform: 'translateX(-50%)', animation: 'glowPulse 9s 1s ease-in-out infinite' }} />
+        {/* ── Content ── */}
+        <div style={{ position: 'relative', zIndex: 10, color: 'white', maxWidth: 820, width: '100%' }}>
 
-        {/* Drifting dot grid */}
-        <div style={{ position: 'absolute', inset: 0, zIndex: 1, opacity: 0.22, backgroundImage: 'radial-gradient(circle, rgba(255,255,255,1) 2.5px, transparent 2.5px)', backgroundSize: '36px 36px', pointerEvents: 'none', animation: 'dotDrift 12s linear infinite' }} />
-
-        {/* Dark overlay so white text stays readable */}
-        <div style={{ position: 'absolute', inset: 0, zIndex: 2, background: 'linear-gradient(180deg, rgba(0,0,0,0.38) 0%, rgba(0,0,0,0.22) 50%, rgba(0,0,0,0.45) 100%)', pointerEvents: 'none' }} />
-
-        {/* Bottom fade */}
-        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 100, background: 'linear-gradient(to top, rgba(13,71,161,0.3), transparent)', zIndex: 3, pointerEvents: 'none' }} />
-
-        {/* Hero content */}
-        <div style={{ position: 'relative', zIndex: 10, textAlign: 'center', color: 'white', maxWidth: 1000, margin: '0 auto', padding: '0 24px', width: '100%', marginTop: 40 }}>
-
-          {/* Logo */}
-          {/* <div className="hero-fadeup" style={{ marginBottom: 20, display: 'flex', justifyContent: 'center' }}>
-            <img src="/Images/logo_2.jpg" alt="Godwa Logo" style={{ height: 72, width: 72, borderRadius: '50%', border: '2.5px solid rgba(240,120,64,0.7)', boxShadow: '0 0 24px rgba(240,120,64,0.4)', objectFit: 'cover' }} />
-          </div> */}
-
-          {/* Badge */}
-          <h1 className="hero-fadeup-1" style={{ fontFamily: 'Oswald, sans-serif', fontSize: 'clamp(1.9rem, 3.8vw, 2.9rem)', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#ffd0a0', marginBottom: 18, marginTop: 80, textShadow: '0 2px 12px rgba(0,0,0,0.5)' }}>
+          {/* Main statement — biggest */}
+          <h1 className="h-main-statement h-fadeup-1">
             13th Biggest Dairy Industry Exhibition
           </h1>
 
-          {/* Main title */}
-          <h4 className="hero-fadeup-2" style={{ fontFamily: 'Oswald, sans-serif', fontSize: 'clamp(1.2rem, 4vw, 3.5rem)', fontWeight: 700, lineHeight: 0.95, margin: '0 0 10px', textTransform: 'uppercase', letterSpacing: '0.05em', color: '#ffffff', textShadow: '0 4px 40px rgba(0,0,0,0.8)' }}>
-            Godwa Dairy Expo
-          </h4>
+          {/* Sub title */}
+          <div className="h-title h-fadeup-2">Godwa Dairy Expo</div>
 
-          {/* Year — highlight */}
-          <div className="hero-fadeup-2" style={{ fontFamily: 'Oswald, sans-serif', fontSize: 'clamp(2rem, 4.55vw, 3rem)', fontWeight: 700, color: '#F07840', letterSpacing: '0.12em', marginBottom: 14, textShadow: '0 2px 20px rgba(240,120,64,0.6)' }}>
-            2026
-          </div>
+          {/* Year */}
+          <div className="h-year h-fadeup-2">2026</div>
 
-          {/* Orange divider */}
-          <div className="hero-fadeup-3" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, marginBottom: 16 }}>
-            <div style={{ height: 1, width: 60, background: 'linear-gradient(to right, transparent, #F07840)' }} />
-            <div style={{ width: 8, height: 8, background: '#F07840', transform: 'rotate(45deg)' }} />
-            <div style={{ height: 1, width: 60, background: 'linear-gradient(to left, transparent, #F07840)' }} />
+          {/* Divider */}
+          <div className="h-divider h-fadeup-3">
+            <div style={{ height: 1, width: 50, background: 'linear-gradient(to right, transparent, #F07840)' }} />
+            <div style={{ width: 6, height: 6, background: '#F07840', transform: 'rotate(45deg)', flexShrink: 0 }} />
+            <div style={{ height: 1, width: 50, background: 'linear-gradient(to left, transparent, #F07840)' }} />
           </div>
 
           {/* Date */}
-          <div className="hero-fadeup-3" style={{ fontFamily: 'Oswald, sans-serif', fontSize: 'clamp(1.8rem, 5vw, 2.4rem)', fontWeight: 600, color: 'rgba(255,255,255,0.92)', letterSpacing: '0.12em', marginBottom: 8 }}>
-            5 – 6 – 7 DECEMBER 2026
-          </div>
+          <div className="h-date h-fadeup-3">5 – 6 – 7 December 2026</div>
 
           {/* Venue */}
-          <p className="hero-fadeup-3" style={{ fontFamily: 'Oswald, sans-serif', fontSize: 'clamp(1.8rem, 5vw, 2.15rem)', fontWeight: 400, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'rgb(229, 245, 246)', marginBottom: 44 }}>
-            <MapPin size={29} style={{ display: 'inline', verticalAlign: 'middle', marginRight: 6, color: '#F07840' }} />
+          <p className="h-venue h-fadeup-4">
+            <MapPin size={20} style={{ color: '#F07840', flexShrink: 0 }} />
             Mahalaxmi Lawns, Karvenagar, Pune – 411052
           </p>
 
-          {/* Three CTA cards */}
-          <div className="hero-fadeup-4" style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
-
-            {/* Exhibitor */}
-            <a href="https://forms.gle/m1o3G6CDSA3q1Jwv7" target="_blank" rel="noopener noreferrer" className="cta-card"
-              style={{ background: '#F07840', color: '#fff', borderRadius: 14, padding: '18px 32px', minWidth: 190, textAlign: 'center', textDecoration: 'none', boxShadow: '0 8px 32px rgba(240,120,64,0.55)' }}>
-              <div style={{ fontFamily: 'Oswald, sans-serif', fontSize: 11, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.75)', marginBottom: 4 }}>Exhibitor</div>
-              <div style={{ fontFamily: 'Oswald, sans-serif', fontSize: 16, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>Book Your Space</div>
+          {/* CTA buttons */}
+          <div className="h-cta-row h-fadeup-5">
+            <a href="https://forms.gle/m1o3G6CDSA3q1Jwv7" target="_blank" rel="noopener noreferrer" className="h-cta-primary">
+              <span className="h-cta-sub">Exhibitor</span>
+              <span className="h-cta-main">Book Your Space</span>
             </a>
-
-            {/* Visitor */}
-            <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer" className="cta-card"
-              style={{ background: 'rgba(255,255,255,0.08)', border: '1.5px solid rgba(255,255,255,0.45)', color: '#fff', borderRadius: 14, padding: '18px 32px', minWidth: 190, textAlign: 'center', textDecoration: 'none', backdropFilter: 'blur(12px)', boxShadow: '0 8px 32px rgba(0,0,0,0.3)' }}>
-              <div style={{ fontFamily: 'Oswald, sans-serif', fontSize: 11, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.65)', marginBottom: 4 }}>Visitor</div>
-              <div style={{ fontFamily: 'Oswald, sans-serif', fontSize: 16, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>Register Here</div>
+            <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer" className="h-cta-secondary">
+              <span className="h-cta-sub">Visitor</span>
+              <span className="h-cta-main">Register Here</span>
             </a>
-
-            {/* Seminar */}
-            <Link href="/contact" className="cta-card"
-              style={{ background: 'rgba(255,255,255,0.08)', border: '1.5px solid rgba(240,120,64,0.5)', color: '#fff', borderRadius: 14, padding: '18px 32px', minWidth: 190, textAlign: 'center', textDecoration: 'none', backdropFilter: 'blur(12px)', boxShadow: '0 8px 32px rgba(0,0,0,0.3)' }}>
-              <div style={{ fontFamily: 'Oswald, sans-serif', fontSize: 11, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.65)', marginBottom: 4 }}>Seminar</div>
-              <div style={{ fontFamily: 'Oswald, sans-serif', fontSize: 16, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>Click Here</div>
+            <Link href="/contact" className="h-cta-outline">
+              <span className="h-cta-sub">Seminar</span>
+              <span className="h-cta-main">Click Here</span>
             </Link>
-
           </div>
+
         </div>
-
-
       </section>
 
       {/* ── STATS ── */}
@@ -281,12 +405,12 @@ export default function HomeClient() {
                 { icon: '📅', title: 'Event Dates', val: '5, 6 & 7 December 2026', sub: '10:00 AM – 6:00 PM Daily' },
                 { icon: '📍', title: 'Venue', val: 'Mahalaxmi Lawns, Karvenagar', sub: 'Pune – 411052, Maharashtra' },
               ].map((item) => (
-                <div key={item.title} style={{ display: 'flex', gap: 20, alignItems: 'flex-start', background: 'white', borderRadius: 20, padding: '24px 28px', marginBottom: 20, boxShadow: '0 4px 24px rgba(240,120,64,0.12)', border: '1.5px solid #FFD9C4' }}>
-                  <div style={{ fontSize: 36, lineHeight: 1, flexShrink: 0, marginTop: 2 }}>{item.icon}</div>
+                <div key={item.title} style={{ display: 'flex', gap: 20, alignItems: 'flex-start', background: 'white', borderRadius: 20, padding: '26px 30px', marginBottom: 20, boxShadow: '0 4px 24px rgba(240,120,64,0.12)', border: '1.5px solid #FFD9C4' }}>
+                  <div style={{ fontSize: 42, lineHeight: 1, flexShrink: 0, marginTop: 4 }}>{item.icon}</div>
                   <div>
-                    <div style={{ fontFamily: 'Oswald, sans-serif', color: '#E8702E', fontWeight: 700, textTransform: 'uppercase', fontSize: 13, letterSpacing: '0.12em', marginBottom: 6 }}>{item.title}</div>
-                    <div style={{ fontFamily: 'Oswald, sans-serif', fontSize: 22, fontWeight: 700, color: '#1a0a00', lineHeight: 1.2, marginBottom: 4 }}>{item.val}</div>
-                    <div style={{ color: '#888', fontSize: 15, fontFamily: 'Oswald, sans-serif' }}>{item.sub}</div>
+                    <div style={{ color: '#E8702E', fontWeight: 700, textTransform: 'uppercase', fontSize: 12, letterSpacing: '0.14em', marginBottom: 8 }}>{item.title}</div>
+                    <div style={{ fontSize: 'clamp(1.4rem, 3vw, 1.9rem)', fontWeight: 800, color: '#1a0a00', lineHeight: 1.15, marginBottom: 6 }}>{item.val}</div>
+                    <div style={{ color: '#777', fontSize: 16, fontWeight: 500 }}>{item.sub}</div>
                   </div>
                 </div>
               ))}
