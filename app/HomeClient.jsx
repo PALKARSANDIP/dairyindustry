@@ -282,7 +282,7 @@ export default function HomeClient() {
 
           {/* CTA buttons */}
           <div className="h-cta-row h-fadeup-5">
-            <a href="https://forms.gle/m1o3G6CDSA3q1Jwv7" target="_blank" rel="noopener noreferrer" className="h-cta-primary">
+            <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer" className="h-cta-primary">
               <span className="h-cta-sub">Exhibitor</span>
               <span className="h-cta-main">Book Your Space</span>
             </a>
