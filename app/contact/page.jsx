@@ -4,7 +4,7 @@ import { MapPin, Phone, Mail, Clock, ExternalLink } from 'lucide-react'
 export const metadata = buildMetadata({
   title: 'Contact Godwa Dairy Expo',
   description: "Contact Godwa Dairy Expo 2026 team. Phone: +91 98500 07425, +91 77220 82620. Email: dairyexpo@gmail.com. Venue: Mahalaxmi Lawns, Karvenagar, Pune. Register for stall or visitor entry.",
-  path: '/contact',
+  path: 'https://forms.gle/RGFDZnbF59sd8tae6',
   keywords: ['godwa expo contact', 'dairy expo pune contact', 'godwa prakashan contact', 'dairy exhibition pune address'],
 })
 
@@ -51,8 +51,8 @@ export default function ContactPage() {
               <h3 style={{ fontFamily: '"Playfair Display", serif', fontSize: 22, fontWeight: 700, color: 'white', marginBottom: 18 }}>Quick Registration</h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                 {[
-                  { label: 'Exhibitor Registration', href: 'https://forms.gle/XbNZWHxgzrxKC4YW8', gold: true },
-                  { label: 'Visitor Registration', href: 'https://forms.gle/XbNZWHxgzrxKC4YW8', gold: false },
+                  { label: 'Exhibitor Registration', href: 'https://forms.gle/RGFDZnbF59sd8tae6', gold: true },
+                  { label: 'Visitor Registration', href: 'https://exporegistration.in/expo-visitor.aspx', gold: false },
                 ].map(({ label, href, gold }) => (
                   <a key={label} href={href} target="_blank" rel="noopener noreferrer" className={gold ? 'btn-gold' : ''} style={gold ? { padding: '14px 20px', borderRadius: 12, fontSize: 15, textDecoration: 'none', justifyContent: 'space-between', gap: 8 } : { background: 'rgba(255,255,255,0.15)', border: '1px solid rgba(255,255,255,0.3)', color: 'white', padding: '14px 20px', borderRadius: 12, fontSize: 15, fontFamily: 'Oswald, sans-serif', fontWeight: 700, textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'space-between', transition: 'all 0.3s' }}>
                     <span>{label}</span>

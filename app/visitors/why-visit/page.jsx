@@ -76,7 +76,7 @@ export default function WhyVisitPage() {
           <a href="/visitors" style={{ background: 'white', color: '#1A3A5C', padding: '12px 26px', borderRadius: 999, fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 15, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
             Visitor Profile <ArrowRight size={16} />
           </a>
-          <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer" style={{ background: '#F5C842', color: '#1A3A5C', padding: '12px 26px', borderRadius: 999, fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 15, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+          <a href="https://exporegistration.in/expo-visitor.aspx" target="_blank" rel="noopener noreferrer" style={{ background: '#F5C842', color: '#1A3A5C', padding: '12px 26px', borderRadius: 999, fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 15, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
             Register Free <ExternalLink size={16} />
           </a>
         </div>
@@ -173,7 +173,7 @@ export default function WhyVisitPage() {
           <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 17, marginBottom: 32, lineHeight: 1.7 }}>
             Join us at Pune for the dairy, bakery, feed and food processing sector's biggest event.
           </p>
-          <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer" style={{ background: '#F5C842', color: '#1A3A5C', padding: '16px 40px', borderRadius: 999, fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 18, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 10, boxShadow: '0 6px 24px rgba(245,200,66,0.35)' }}>
+          <a href="https://exporegistration.in/expo-visitor.aspx" target="_blank" rel="noopener noreferrer" style={{ background: '#F5C842', color: '#1A3A5C', padding: '16px 40px', borderRadius: 999, fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 18, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 10, boxShadow: '0 6px 24px rgba(245,200,66,0.35)' }}>
             Register as Visitor — It's Free! <ExternalLink size={18} />
           </a>
         </div>

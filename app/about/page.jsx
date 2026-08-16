@@ -107,8 +107,8 @@ export default function AboutPage() {
             <h3 style={{ fontFamily: '"Playfair Display", serif', fontSize: 24, fontWeight: 700, color: '#F5C842', marginBottom: 12 }}>Godwa Prakashan Pvt Ltd</h3>
             <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: 1.8, maxWidth: 500, margin: '0 auto 24px', fontSize: 15 }}>A trusted name in dairy and food industry events since 2012. Connecting manufacturers, suppliers, buyers and professionals across India.</p>
             <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link href="/contact" className="btn-gold" style={{ padding: '12px 24px', borderRadius: 999, fontSize: 14, textDecoration: 'none' }}>Contact Us</Link>
-              <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer" style={{ background: 'rgba(255,255,255,0.2)', border: '2px solid rgba(255,255,255,0.4)', color: 'white', padding: '12px 24px', borderRadius: 999, fontSize: 14, fontFamily: 'Oswald, sans-serif', fontWeight: 700, textDecoration: 'none', display: 'inline-block' }}>Book Your Stall</a>
+              <Link href="https://forms.gle/RGFDZnbF59sd8tae6" className="btn-gold" style={{ padding: '12px 24px', borderRadius: 999, fontSize: 14, textDecoration: 'none' }}>Contact Us</Link>
+              <a href="https://exporegistration.in/expo-visitor.aspx" target="_blank" rel="noopener noreferrer" style={{ background: 'rgba(255,255,255,0.2)', border: '2px solid rgba(255,255,255,0.4)', color: 'white', padding: '12px 24px', borderRadius: 999, fontSize: 14, fontFamily: 'Oswald, sans-serif', fontWeight: 700, textDecoration: 'none', display: 'inline-block' }}>Book Your Stall</a>
             </div>
           </div>
         </div>

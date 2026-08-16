@@ -30,7 +30,7 @@ const stats = [
 
 const quickLinks = [
   { label: 'Exhibitors Profile', href: '/exhibitors/profile', icon: <ArrowRight size={16} />, style: 'outline' },
-  { label: 'Book Your Space', href: 'https://forms.gle/XbNZWHxgzrxKC4YW8', icon: <ExternalLink size={16} />, external: true, style: 'gold' },
+  { label: 'Book Your Space', href: 'https://exporegistration.in/expo-visitor.aspx', icon: <ExternalLink size={16} />, external: true, style: 'gold' },
   { label: 'Download Brochure', href: '/godwa-brochure-2026.pdf', icon: <Download size={16} />, download: 'Godwa-Dairy-Expo-2026-Brochure.pdf', style: 'outline' },
   { label: 'Download Layout', href: '/godwa-layout-2026.pdf', icon: <Download size={16} />, download: 'Godwa-Dairy-Expo-2026-Layout.pdf', style: 'outline' },
 ]
@@ -115,7 +115,7 @@ export default function WhyExhibitPage() {
             Book your stall today and be part of India's biggest dairy industry event — 5–7 December 2026, Pune.
           </p>
           <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer"
+            <a href="https://exporegistration.in/expo-visitor.aspx" target="_blank" rel="noopener noreferrer"
               style={{ background: '#F5C842', color: '#1A3A5C', padding: '16px 40px', borderRadius: 999, fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 18, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 10, boxShadow: '0 6px 24px rgba(245,200,66,0.3)' }}>
               Book Your Space <ExternalLink size={18} />
             </a>

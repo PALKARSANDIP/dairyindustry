@@ -95,7 +95,7 @@ export default function AttractionsPage() {
           <a href="/visitors" style={{ background: 'white', color: '#1A3A5C', padding: '12px 26px', borderRadius: 999, fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 15, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
             Visitor Profile <ArrowRight size={16} />
           </a>
-          <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer" style={{ background: '#F5C842', color: '#1A3A5C', padding: '12px 26px', borderRadius: 999, fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 15, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+          <a href="https://exporegistration.in/expo-visitor.aspx" target="_blank" rel="noopener noreferrer" style={{ background: '#F5C842', color: '#1A3A5C', padding: '12px 26px', borderRadius: 999, fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 15, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
             Register Free <ExternalLink size={16} />
           </a>
         </div>
@@ -160,7 +160,7 @@ export default function AttractionsPage() {
         <div style={{ maxWidth: 600, margin: '0 auto' }}>
           <h2 style={{ fontFamily: '"Playfair Display", serif', fontSize: 'clamp(22px,4vw,32px)', fontWeight: 700, color: 'white', marginBottom: 12 }}>Plan Your Visit to Pune</h2>
           <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 17, marginBottom: 28, lineHeight: 1.7 }}>Register for free and experience the expo alongside Pune's incredible attractions.</p>
-          <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer" style={{ background: '#F5C842', color: '#1A3A5C', padding: '16px 40px', borderRadius: 999, fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 17, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+          <a href="https://exporegistration.in/expo-visitor.aspx" target="_blank" rel="noopener noreferrer" style={{ background: '#F5C842', color: '#1A3A5C', padding: '16px 40px', borderRadius: 999, fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 17, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
             Register as Visitor — Free! <ExternalLink size={17} />
           </a>
         </div>

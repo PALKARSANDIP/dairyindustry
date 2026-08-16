@@ -98,7 +98,7 @@ export default function Footer() {
             </li>
           </ul>
           <div className="mt-5">
-            <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer" className="btn-gold px-5 py-2.5 rounded-full text-sm">
+            <a href="https://exporegistration.in/expo-visitor.aspx" target="_blank" rel="noopener noreferrer" className="btn-gold px-5 py-2.5 rounded-full text-sm">
               Book Your Stall →
             </a>
           </div>

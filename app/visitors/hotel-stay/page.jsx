@@ -159,7 +159,7 @@ export default function HotelStayPage() {
         <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 'clamp(16px,2.5vw,20px)', maxWidth: 620, margin: '0 auto 28px', lineHeight: 1.7 }}>
           Recommended hotels and accommodation near the expo venue in Pune for all budgets.
         </p>
-        <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer" style={{ background: '#F5C842', color: '#1A3A5C', padding: '12px 28px', borderRadius: 999, fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 15, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+        <a href="https://exporegistration.in/expo-visitor.aspx" target="_blank" rel="noopener noreferrer" style={{ background: '#F5C842', color: '#1A3A5C', padding: '12px 28px', borderRadius: 999, fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 15, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
           Register as Visitor — Free! <ExternalLink size={16} />
         </a>
       </section>
@@ -258,7 +258,7 @@ export default function HotelStayPage() {
           <h2 style={{ fontFamily: '"Playfair Display", serif', fontSize: 'clamp(22px,4vw,32px)', fontWeight: 700, color: 'white', marginBottom: 12 }}>Ready to Attend?</h2>
           <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 17, marginBottom: 28, lineHeight: 1.7 }}>Register for free and plan your stay in Pune for the biggest dairy industry expo of 2026.</p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer" style={{ background: '#F5C842', color: '#1A3A5C', padding: '14px 32px', borderRadius: 999, fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 16, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+            <a href="https://exporegistration.in/expo-visitor.aspx" target="_blank" rel="noopener noreferrer" style={{ background: '#F5C842', color: '#1A3A5C', padding: '14px 32px', borderRadius: 999, fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 16, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
               Register Now — Free! <ExternalLink size={16} />
             </a>
             <a href="/visitors/attractions" style={{ background: 'transparent', color: 'white', padding: '14px 32px', borderRadius: 999, fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 16, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8, border: '2px solid rgba(255,255,255,0.4)' }}>

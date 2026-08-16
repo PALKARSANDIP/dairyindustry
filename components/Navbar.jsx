@@ -22,7 +22,7 @@ const navLinks = [
     sub: [
       { label: 'Why Exhibit?', href: '/exhibitors/why-exhibit' },
       { label: 'Exhibitors Profile', href: '/exhibitors/profile' },
-      { label: 'Exhibitors Registration', href: 'https://forms.gle/XbNZWHxgzrxKC4YW8', external: true },
+      { label: 'Exhibitors Registration', href: 'https://exporegistration.in/expo-visitor.aspx', external: true },
       { label: 'Downloads', href: '/downloads' },
     ],
   },
@@ -32,7 +32,7 @@ const navLinks = [
     sub: [
       { label: 'Visitors Profile', href: '/visitors' },
       { label: 'Why Visit?', href: '/visitors/why-visit' },
-      { label: 'Visitors Registration', href: 'https://forms.gle/XbNZWHxgzrxKC4YW8', external: true },
+      { label: 'Visitors Registration', href: 'https://exporegistration.in/expo-visitor.aspx', external: true },
       { label: 'Hotel Stay', href: '/visitors/hotel-stay' },
       { label: 'Attractions in Pune', href: '/visitors/attractions' },
     ],

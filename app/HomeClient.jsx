@@ -86,8 +86,8 @@ export default function HomeClient() {
         /* main statement — biggest text */
         .h-main-statement {
           font-size: clamp(1.1rem, 3.8vw, 2.6rem);
-          font-weight: 800;
-          color: #ffffff;
+          font-weight: 500;
+          color: #bbecfffc;
           line-height: 1.1;
           white-space: nowrap;
           margin: 0 0 18px;
@@ -100,9 +100,9 @@ export default function HomeClient() {
 
         /* sub title */
         .h-title {
-          font-size: clamp(1rem, 3.5vw, 2rem);
-          font-weight: 600;
-          color: rgba(255,255,255,0.55);
+          font-size: clamp(1.5rem, 3.9vw, 2.5rem);
+          font-weight: 800;
+          color: rgb(255, 255, 255);
           line-height: 1.2;
           margin: 0 0 4px;
           letter-spacing: 0.06em;
@@ -129,18 +129,20 @@ export default function HomeClient() {
 
         /* date */
         .h-date {
-          font-size: clamp(1.2rem, 4vw, 2rem);
-          font-weight: 700;
+          font-size: clamp(1.7rem, 4.8vw, 2.8rem);
+          font-weight: 800;
           color: rgba(255,255,255,0.95);
           letter-spacing: 0.12em;
           text-transform: uppercase;
           margin: 0 0 18px;
+          margin-top: 12px;
         }
 
         /* venue */
         .h-venue {
-          font-size: clamp(1rem, 3vw, 1.4rem);
-          color: rgba(255,255,255,0.65);
+          font-size: clamp(1.8rem, 3.8vw, 1.8rem);
+          font-weight: 700;
+          color: rgb(255, 255, 255);
           letter-spacing: 0.04em;
           margin: 0 0 32px;
           display: flex;
@@ -148,6 +150,7 @@ export default function HomeClient() {
           justify-content: center;
           gap: 6px;
           flex-wrap: wrap;
+          margin-top: 32px;
         }
 
         /* cta row */
@@ -156,6 +159,8 @@ export default function HomeClient() {
           gap: 12px;
           justify-content: center;
           flex-wrap: wrap;
+          border-radius: 12px;
+          margin-top: 19px;
         }
         .h-cta-primary {
           background: #F07840;
@@ -216,13 +221,13 @@ export default function HomeClient() {
 
         /* sub-label inside cta */
         .h-cta-sub {
-          font-size: 0.62rem;
+          font-size: 0.82rem;
           letter-spacing: 0.18em;
           text-transform: uppercase;
-          opacity: 0.7;
+          opacity: 1.7;
           display: block;
           margin-bottom: 3px;
-          font-weight: 500;
+          font-weight: 700;
         }
         .h-cta-main {
           font-size: 0.88rem;
@@ -282,15 +287,15 @@ export default function HomeClient() {
 
           {/* CTA buttons */}
           <div className="h-cta-row h-fadeup-5">
-            <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer" className="h-cta-primary">
+            <a href="https://exporegistration.in/expo-visitor.aspx" target="_blank" rel="noopener noreferrer" className="h-cta-primary">
               <span className="h-cta-sub">Exhibitor</span>
               <span className="h-cta-main">Book Your Space</span>
             </a>
-            <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer" className="h-cta-secondary">
+            <a href="https://exporegistration.in/expo-visitor.aspx" target="_blank" rel="noopener noreferrer" className="h-cta-secondary">
               <span className="h-cta-sub">Visitor</span>
               <span className="h-cta-main">Register Here</span>
             </a>
-            <Link href="/contact" className="h-cta-outline">
+            <Link href="https://forms.gle/RGFDZnbF59sd8tae6" className="h-cta-outline">
               <span className="h-cta-sub">Seminar</span>
               <span className="h-cta-main">Click Here</span>
             </Link>
@@ -336,10 +341,10 @@ export default function HomeClient() {
             <p style={{ color: 'rgba(255,255,255,0.65)', marginTop: 6, fontSize: 15, fontFamily: 'Oswald, sans-serif' }}>Limited stalls available for exhibitors</p>
           </div>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-            <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ padding: '13px 28px', borderRadius: 999, fontSize: 15, gap: 8, textDecoration: 'none' }}>
+            <a href="https://forms.gle/RGFDZnbF59sd8tae6" target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ padding: '13px 28px', borderRadius: 999, fontSize: 15, gap: 8, textDecoration: 'none' }}>
               Exhibitor Registration <ArrowRight size={15} />
             </a>
-            <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer" style={{ background: 'rgba(255,255,255,0.1)', border: '2px solid rgba(255,255,255,0.35)', color: 'white', padding: '13px 28px', borderRadius: 999, fontSize: 15, fontFamily: 'Oswald, sans-serif', fontWeight: 700, display: 'inline-flex', alignItems: 'center', textDecoration: 'none' }}>
+            <a href="https://exporegistration.in/expo-visitor.aspx" target="_blank" rel="noopener noreferrer" style={{ background: 'rgba(255,255,255,0.1)', border: '2px solid rgba(255,255,255,0.35)', color: 'white', padding: '13px 28px', borderRadius: 999, fontSize: 15, fontFamily: 'Oswald, sans-serif', fontWeight: 700, display: 'inline-flex', alignItems: 'center', textDecoration: 'none' }}>
               Visitor Registration
             </a>
           </div>
@@ -415,10 +420,10 @@ export default function HomeClient() {
                 </div>
               ))}
               <div style={{ display: 'flex', gap: 12, marginTop: 12, flexWrap: 'wrap' }}>
-                <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ padding: '14px 28px', borderRadius: 999, fontSize: 15, gap: 8, textDecoration: 'none' }}>
+                <a href="https://exporegistration.in/expo-visitor.aspx" target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ padding: '14px 28px', borderRadius: 999, fontSize: 15, gap: 8, textDecoration: 'none' }}>
                   Book Your Space <ArrowRight size={15} />
                 </a>
-                <Link href="/contact" className="btn-blue" style={{ padding: '14px 28px', borderRadius: 999, fontSize: 15, textDecoration: 'none' }}>
+                <Link href="https://forms.gle/RGFDZnbF59sd8tae6" className="btn-blue" style={{ padding: '14px 28px', borderRadius: 999, fontSize: 15, textDecoration: 'none' }}>
                   Get Directions
                 </Link>
               </div>
@@ -444,7 +449,7 @@ export default function HomeClient() {
           </div>
           <div style={{ background: 'white', borderRadius: 24, overflow: 'hidden', boxShadow: '0 8px 40px rgba(240,120,64,0.15)', border: '1.5px solid #FFD9C4' }}>
             <iframe
-              src="/godwa-layout-2026.pdf"
+              src="/final-brochure-8-Pages_compressed.pdf"
               width="100%"
               height="620"
               style={{ border: 'none', display: 'block' }}
@@ -493,10 +498,10 @@ export default function HomeClient() {
             Join 15,000+ professionals and 150+ leading exhibitors at India's most impactful Dairy Machinery Expo.
           </p>
           <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer" style={{ background: '#fff', color: '#c0562a', padding: '16px 40px', borderRadius: 999, fontSize: 16, fontFamily: 'Oswald, sans-serif', fontWeight: 700, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8, boxShadow: '0 8px 30px rgba(0,0,0,0.2)', letterSpacing: '0.05em' }}>
+            <a href="https://exporegistration.in/expo-visitor.aspx" target="_blank" rel="noopener noreferrer" style={{ background: '#fff', color: '#c0562a', padding: '16px 40px', borderRadius: 999, fontSize: 16, fontFamily: 'Oswald, sans-serif', fontWeight: 700, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8, boxShadow: '0 8px 30px rgba(0,0,0,0.2)', letterSpacing: '0.05em' }}>
               Book Your Stall Now <ArrowRight size={18} />
             </a>
-            <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer" style={{ background: 'rgba(255,255,255,0.15)', border: '2px solid rgba(255,255,255,0.6)', color: 'white', padding: '16px 40px', borderRadius: 999, fontSize: 16, fontFamily: 'Oswald, sans-serif', fontWeight: 700, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', letterSpacing: '0.05em' }}>
+            <a href="https://exporegistration.in/expo-visitor.aspx" target="_blank" rel="noopener noreferrer" style={{ background: 'rgba(255,255,255,0.15)', border: '2px solid rgba(255,255,255,0.6)', color: 'white', padding: '16px 40px', borderRadius: 999, fontSize: 16, fontFamily: 'Oswald, sans-serif', fontWeight: 700, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', letterSpacing: '0.05em' }}>
               Register as Visitor
             </a>
           </div>

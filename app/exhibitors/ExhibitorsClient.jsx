@@ -46,7 +46,7 @@ const bannerSizes = [
   },
 ]
 
-const REGISTER_URL = 'https://forms.gle/XbNZWHxgzrxKC4YW8'
+const REGISTER_URL = 'https://exporegistration.in/expo-visitor.aspx'
 
 const thCell = { padding: '12px 16px', fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 13, color: '#1A3A5C', textAlign: 'left', borderBottom: '2px solid #dde4ec', letterSpacing: '0.04em', textTransform: 'uppercase', background: '#f0f4f8' }
 const tdCell = { padding: '12px 16px', fontSize: 14, color: '#444', borderBottom: '1px solid #eef1f5', verticalAlign: 'top' }

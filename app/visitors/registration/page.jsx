@@ -21,7 +21,7 @@ export default function VisitorRegistrationPage() {
           <div style={{ fontSize: 64, marginBottom: 24 }}>📋</div>
           <h2 style={{ fontFamily: '"Playfair Display", serif', fontSize: 32, fontWeight: 700, color: '#1A3A5C', marginBottom: 16 }}>Content Coming Soon</h2>
           <p style={{ color: '#666', fontSize: 17, lineHeight: 1.8, marginBottom: 32 }}>Detailed registration information is being prepared. You can register directly using the form below.</p>
-          <a href="https://forms.gle/XbNZWHxgzrxKC4YW8" target="_blank" rel="noopener noreferrer" style={{ background: '#F5C842', color: '#1A3A5C', padding: '14px 32px', borderRadius: 999, fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 16, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+          <a href="https://exporegistration.in/expo-visitor.aspx" target="_blank" rel="noopener noreferrer" style={{ background: '#F5C842', color: '#1A3A5C', padding: '14px 32px', borderRadius: 999, fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: 16, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
             Register Now — It's Free! <ExternalLink size={16} />
           </a>
         </div>

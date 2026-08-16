@@ -743,7 +743,7 @@ export default async function ArticlePage({ params }) {
                   <h3 className="cta-title">India's Premier<br />Dairy Exhibition</h3>
                   <p className="cta-subtitle">5–7 December 2026, Pune. Connect with industry leaders and innovators.</p>
                   <a
-                    href="https://forms.gle/XbNZWHxgzrxKC4YW8"
+                    href="https://exporegistration.in/expo-visitor.aspx"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="cta-btn-primary"

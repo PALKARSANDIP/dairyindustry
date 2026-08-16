@@ -2,10 +2,10 @@ import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import { Download, FileText, Map, Image, List, BookOpen, AlignLeft } from 'lucide-react'
 
 const docs = [
-  { icon: Map, title: 'Exhibition Layout', desc: 'Floor plan and stall layout map for Godwa Expo 2026', tag: 'PDF', color: '#E8702E', size: '2.4 MB' },
-  { icon: BookOpen, title: 'Official Brochure', desc: 'Complete information brochure about Godwa Dairy Expo 2026', tag: 'PDF', color: '#E8702E', size: '5.1 MB' },
+  // { icon: Map, title: 'Exhibition Layout', desc: 'Floor plan and stall layout map for Godwa Expo 2026', tag: 'PDF', color: '#E8702E', size: '2.4 MB' },
+  // { icon: BookOpen, title: 'Official Brochure', desc: 'Complete information brochure about Godwa Dairy Expo 2026', tag: 'PDF', color: '#E8702E', size: '5.1 MB' },
   { icon: List, title: 'Exhibitor List 2025', desc: 'Complete list of exhibitors from the previous 2025 edition', tag: 'PDF', color: '#E8702E', size: '1.8 MB', href: '/Exhibitor-list-2025-Final.pdf' },
-  { icon: Image, title: 'Stall Banner Guidelines', desc: 'Specifications and size guidelines for stall banners and flex printing', tag: 'PDF', color: '#E8702E', size: '0.9 MB' },
+  // { icon: Image, title: 'Stall Banner Guidelines', desc: 'Specifications and size guidelines for stall banners and flex printing', tag: 'PDF', color: '#E8702E', size: '0.9 MB' },
   { icon: AlignLeft, title: 'Terms & Conditions', desc: 'Overall terms and conditions for exhibitors and visitors', tag: 'PDF', color: '#E8702E', size: '1.2 MB', href: '/DOC-20260309-WA0016.pdf' },
 ]
 
