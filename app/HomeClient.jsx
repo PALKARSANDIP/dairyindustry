@@ -82,6 +82,11 @@ export default function HomeClient() {
           text-align: center;
           box-sizing: border-box;
         }
+        /* Navbar grows to ~126px tall at the lg breakpoint (100px logo badge),
+           so the hero needs extra top clearance there to avoid overlapping the heading. */
+        @media (min-width: 1024px) {
+          .hero-sec { padding-top: 160px; }
+        }
 
         /* main statement — biggest text */
         .h-main-statement {
@@ -94,7 +99,7 @@ export default function HomeClient() {
           letter-spacing: 0.01em;
           text-shadow: 0 2px 20px rgba(0,0,0,0.45);
         }
-        @media (max-width: 480px) {
+        @media (max-width: 900px) {
           .h-main-statement { white-space: normal; }
         }
 
